@@ -1,0 +1,225 @@
+@import "../../assets/stylesheets/colors-theme";
+
+.home {
+  width: $appWidth;
+  margin: 35px auto 0;
+  .jewellery-sliding-header {
+    position: relative;
+    z-index: 90;
+    padding: 10px 10px 10px 15px;
+    font-size: 1.2em;
+    background-color: $bgcolor;
+    text-align: center;
+    width: 200px;
+    border: 1px solid $borderColor;
+    border-top: 3px solid $mcolor;
+    border-bottom-color: $bgcolor;
+    margin-top: 50px;
+    margin-bottom: -1px;
+  }
+  .slide-how-it-works {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    .slideShow-container {
+      width: 72%;
+      border: 1px solid $borderColor;
+      ngb-carousel {
+        //border: 1px solid black;
+        width: 100%;
+      }
+    }
+    .how-it-works-details-container {
+      //border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      justify-content: space-between;
+      align-items: flex-end;
+      & > .how-it-works-header {
+        display: none;
+        margin-top: 0;
+      }
+      .how-it-works-item {
+        background-color: $bgcolor;
+        height: 150px;
+        //padding: 15px 0;
+        border: 1px solid $borderColor;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          //border: 1px solid black;
+          height: 50px;
+        }
+        h3 {
+          //border: 1px solid black;
+          margin-top: 10px;
+          text-align: center;
+          width: 85%;
+        }
+      }
+    }
+  }
+
+  .offers-container {
+    display: flex;
+    //margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    //border: 1px black solid;
+    background-color: $bgcolor;
+    border: 1px solid $borderColor;
+    button {
+      //border: 1px black solid;
+      background-color: rgba(0, 0, 0, 0);
+      cursor: pointer;
+      &:focus, &:active {
+        outline: 0;
+      }
+      img {
+        height: 25px;
+      }
+    }
+    .btn:focus {
+      outline: 0;
+    }
+    .overFlow-container {
+      overflow: hidden;
+      height: 265px;
+      width: 100%;
+      //border: 1px black solid;
+      jewellery-thumbnail {
+        width: 600%;
+      }
+    }
+  }
+}
+
+/*******************/
+/*Responsive styles*/
+/*******************/
+
+@media screen and (min-width: 1920px) {
+  .home {
+    .slide-how-it-works {
+      flex-direction: column;
+      align-items: center;
+      .slideShow-container {
+        width: 1024px;
+      }
+      .how-it-works-details-container {
+        //border: 1px solid black;
+        width: 100%;
+        flex-direction: row;
+        margin-top: 35px;
+        .how-it-works-item {
+          max-width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .home {
+    .slide-how-it-works {
+      flex-direction: column;
+      .slideShow-container {
+        width: 100%;
+        ngb-carousel {
+          width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .how-it-works-details-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 35px;
+        .how-it-works-item {
+          //border: 1px solid black;
+          max-width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    .slide-how-it-works {
+      .how-it-works-details-container {
+        .how-it-works-item {
+          h3 {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    width: $smallScreenWidth;
+    .slide-how-it-works {
+      .how-it-works-details-container {
+        .how-it-works-item {
+          h3 {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home {
+    .slide-how-it-works {
+      .how-it-works-details-container {
+        //border: 1px solid black;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+        .how-it-works-item {
+          max-width: 100%;
+          height: 30%;
+          flex-direction: row;
+          img {
+            height: 70%;
+            margin-right: 15px;
+            margin-left: 15px;
+          }
+          h3 {
+            font-size: 0.9em;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

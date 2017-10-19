@@ -1,0 +1,28 @@
+<div class="product-thumbnail-container" [ngStyle]="applyTranslate()">
+  <md-card *ngFor="let product of products" class="product-thumbnail">
+
+    <div *ngIf="showEditDelBtn" class="button-container">
+      <button (click)="editProduct(product)"><img src="app/assets/images/edit-icon.svg">edit</button>
+      <button (click)="deleteProduct(product)"><img src="app/assets/images/cross-icon.svg">delete</button>
+    </div>
+
+    <jewellery-favourite-button class="fav-btn" [product]="product" *ngIf="showFavouriteBtn"
+                                [isFavourite]="favouriteBtnStatus(product)"></jewellery-favourite-button>
+
+    <div (click)="routingToJewelleryDetails(product?.type, product?.id)" class="card-details">
+      <img [src]="product?.imageUrl[0].url">
+      <h3>{{product?.productName}}</h3>
+      <h3>{{product?.sellerName}}</h3>
+      <h3><strong>{{product?.price}} <span>EGP/gm</span></strong></h3>
+    </div>
+  </md-card>
+
+  <div *ngIf="!products?.length" class="alert alert-warning warning empty-store-alert" role="alert">
+    <p class="alert-body">
+      <md-icon svgIcon="info"></md-icon>
+      No products available, please come back later!
+    </p>
+  </div>
+
+</div>
+

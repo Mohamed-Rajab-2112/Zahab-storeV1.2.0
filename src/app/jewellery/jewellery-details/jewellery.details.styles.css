@@ -1,0 +1,108 @@
+/* line 3, jewellery.details.styles.scss */
+.jewellery-details {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-bottom: 25px;
+}
+/* line 11, jewellery.details.styles.scss */
+.jewellery-details .title-id-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  margin: 100px auto 50px;
+}
+/* line 17, jewellery.details.styles.scss */
+.jewellery-details .title-id-container span {
+  font-size: 0.6em;
+  text-transform: none;
+}
+/* line 21, jewellery.details.styles.scss */
+.jewellery-details .title-id-container .name-and-price {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #31004a;
+}
+/* line 26, jewellery.details.styles.scss */
+.jewellery-details .title-id-container .name-and-price .name-and-fav {
+  display: flex;
+  align-items: center;
+}
+/* line 32, jewellery.details.styles.scss */
+.jewellery-details .images-description-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+/* line 38, jewellery.details.styles.scss */
+.jewellery-details .images-description-container .all-images-container {
+  display: block;
+}
+/* line 40, jewellery.details.styles.scss */
+.jewellery-details .images-description-container .all-images-container img {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+/* line 45, jewellery.details.styles.scss */
+.jewellery-details .images-description-container .all-images-container .images-list {
+  text-align: center;
+}
+/* line 47, jewellery.details.styles.scss */
+.jewellery-details .images-description-container .all-images-container .images-list img {
+  display: inline-block;
+  width: 25%;
+  margin: 1%;
+  border: 1px solid #31004a;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+/* line 54, jewellery.details.styles.scss */
+.jewellery-details .images-description-container .all-images-container .images-list img:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+/* line 61, jewellery.details.styles.scss */
+.jewellery-details .images-description-container p {
+  margin-top: 50px;
+  text-align: center;
+}
+/* line 66, jewellery.details.styles.scss */
+.jewellery-details .selectedimage {
+  opacity: 0.5;
+}
+/* line 69, jewellery.details.styles.scss */
+.jewellery-details seller-thumbnail {
+  margin: 0 auto;
+  width: 90%;
+}
+
+/*******************/
+/*Responsive styles*/
+/*******************/
+@media screen and (max-width: 1024px) {
+  /* line 80, jewellery.details.styles.scss */
+  .jewellery-details {
+    margin-top: 25px;
+    border: 1px solid lightgrey;
+  }
+  /* line 83, jewellery.details.styles.scss */
+  .jewellery-details .title-id-container {
+    margin-top: 35px;
+  }
+}
+@media screen and (max-width: 425px) {
+  /* line 90, jewellery.details.styles.scss */
+  .jewellery-details {
+    width: 95%;
+  }
+  /* line 93, jewellery.details.styles.scss */
+  .jewellery-details .title-id-container .name-and-price {
+    flex-wrap: wrap;
+  }
+}

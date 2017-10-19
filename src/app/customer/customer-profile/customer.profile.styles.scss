@@ -1,0 +1,71 @@
+@import "../../assets/stylesheets/colors-theme.scss";
+
+.customer-profile-container {
+  width: $appWidth;
+  background-color: $bgcolor;
+  margin: 0 auto;
+  min-height: 500px;
+  h2 {
+    padding-top: 50px;
+    margin-left: 25px;
+  }
+  .tabs {
+    width: 80%;
+    margin: 0 auto;
+    form {
+      width: 50%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    h3 {
+      margin-top: 50px;
+      border-bottom: 1px solid $dcolor;
+      margin-bottom: 15px;
+    }
+  }
+  .delete-container {
+    width: 50%;
+    margin: 0 auto 45px;
+    display: flex;
+    flex-direction: column;
+    button {
+      margin-top: 15px;
+      background-color: red;
+    }
+  }
+  .note-for-user {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .submit-button {
+    @include button-focused;
+  }
+}
+
+/*******************/
+/*Responsive styles*/
+/*******************/
+
+@media screen and (max-width: 1024px) {
+  .customer-profile-container {
+    margin-top: 25px;
+    border: 1px solid $borderColor;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .customer-profile-container {
+    width: $smallScreenWidth;
+    .tabs {
+      form {
+        width: 85%;
+      }
+    }
+  }
+}

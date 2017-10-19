@@ -1,0 +1,56 @@
+@import "../../assets/stylesheets/colors-theme";
+
+.jewellery-filter-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto 50px;
+  //border: 1px solid black;
+  .button-group {
+    //flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    //border: 1px solid black;
+    button {
+      @include button-default;
+      width: 100px;
+      text-transform: capitalize;
+      margin-right: 5px;
+    }
+    .selected-button {
+      @include button-focused;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .jewellery-filter-container {
+    flex-direction: column;
+    align-items: center;
+    .button-group {
+      justify-content: center;
+    }
+    div:last-child {
+      margin-top: 35px;
+      //width: ;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .jewellery-filter-container {
+    .button-group {
+      flex-wrap: wrap;
+      button {
+        margin: 5px;
+        //width: 75px;
+      }
+    }
+    div:last-child {
+      md-select {
+        margin-top: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+<!--<div class="add-product-form">-->
+<form autocomplete="off" #productForm="ngForm" novalidate
+      (ngSubmit)="productForm.valid && publishProduct(productForm.value)" md-dialog-content>
+
+  <!--<div class="form-field-container">-->
+  <!--<label>Name</label>-->
+  <div class="form-field-container">
+    <md-input-container>
+      <input type="text" mdInput name="productName" placeholder="Product Name..." [(ngModel)]="product.productName"
+             class="last-child" required>
+    </md-input-container>
+    <em *ngIf="productForm.submitted && productForm.controls?.productName.invalid">This field is required</em>
+  </div>
+
+  <!--</div>-->
+
+  <div class="form-field-container">
+    <!--<div class="form-field-container">-->
+    <!--<label>Product Image</label>-->
+    <label for="imagesInput" class="upload-btn">Upload Photos</label>
+    <em *ngIf="productForm.submitted && !imageUrlValid">Product image required</em>
+    <!--</div>-->
+  </div>
+
+  <input type="file" name="imageUrl" (change)="getImageUrl($event)" multiple id="imagesInput" accept="image/*"
+         style="display: none">
+
+  <div class="prod-img-thumbnail-container">
+    <div *ngFor="let image of imagesFilesList">
+      <h5>{{image?.name}}</h5>
+      <img [src]="image?.url">
+      <button (click)="deleteImage(image)" md-raised-button>Delete image</button>
+    </div>
+  </div>
+  <!--<em>You can't upload more than 3 images for the same product</em>-->
+
+  <!--<div class="form-field-container">-->
+  <!--<label>Product type</label>-->
+
+  <div class="form-field-container">
+    <md-select name="type" [(ngModel)]="product.type" placeholder="Product type"
+               class="last-child" required>
+      <!--<md-option [hidden]="product.type">{{product.type}}</md-option>-->
+      <md-option *ngFor="let type of productTypes" [value]="type">{{type}}</md-option>
+    </md-select>
+    <em *ngIf="productForm.submitted && productForm.value.type == undefined">this field
+      required</em>
+  </div>
+
+  <!--</div>-->
+
+  <!--<label>Price for 1 gram (includes taxes and working cost L.E)</label>-->
+
+  <div class="form-field-container">
+    <md-input-container>
+      <input title="price" type="number" name="price" mdInput [(ngModel)]="product.price"
+             placeholder="Price for 1 gram " required>
+    </md-input-container>
+    <em *ngIf="productForm.submitted && productForm.controls?.price.invalid">This field is required</em>
+  </div>
+
+  <!--<fieldset>-->
+  <!--<label>Gold Degree</label>-->
+
+  <div class="form-field-container">
+    <md-select name="goldDegree" [(ngModel)]="product.goldDegree" placeholder="Gold Degree" required>
+      <!--<option [hidden]="product.goldDegree">{{product.goldDegree}}</option>-->
+      <md-option *ngFor="let gold of goldDegrees" [value]="gold">{{gold}}</md-option>
+    </md-select>
+    <em *ngIf="productForm.submitted && productForm.value.goldDegree == undefined">This field is
+      required</em>
+  </div>
+  <!--</fieldset>-->
+
+  <div class="dialog-buttons">
+    <button md-raised-button [md-dialog-close]="true">Close</button>
+    <button md-raised-button type="submit">Submit</button>
+  </div>
+</form>
+<!--</div>-->

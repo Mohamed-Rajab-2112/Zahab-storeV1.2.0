@@ -1,0 +1,44 @@
+<div class="sellers-list-container">
+
+  <form [formGroup]="filterSellersForm">
+
+    <div class="field">
+      <md-input-container>
+        <input mdInput placeholder="Filter vendors by area" [mdAutocomplete]="auto" formControlName="stateCtrl">
+      </md-input-container>
+
+      <md-autocomplete #auto="mdAutocomplete">
+        <md-option *ngFor="let area of filteredAreas | async" [value]="area" (click)="filterSellers(area)">
+          {{ area }}
+        </md-option>
+      </md-autocomplete>
+    </div>
+
+  </form>
+
+  <div class="alert alert-warning warning" role="alert" *ngIf="showVerifiedVendorAlert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+            (click)="dismissVerifiedVendors()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <p><img src="app/assets/images/info-icon.svg">
+      We highly
+      recommend
+      dealing with <strong>verified vendors</strong>, verified vendor are assured as a real vendor and trusted. please
+      check <img src="app/assets/images/check-circle-icon.svg"> badge for verified vendors.</p>
+  </div>
+
+  <p *ngIf="!viewList?.length">No search result found</p>
+
+  <seller-thumbnail [sellerDetails]="seller" *ngFor="let seller of viewList"></seller-thumbnail>
+
+  <ngb-pagination *ngIf="viewList?.length"
+                  [collectionSize]="paginationLength"
+                  [(page)]="page"
+                  [pageSize]="pageSize"
+                  [maxSize]="10"
+                  [rotate]="true"
+                  [boundaryLinks]="false" (pageChange)="applyPagination($event)">
+  </ngb-pagination>
+
+</div>

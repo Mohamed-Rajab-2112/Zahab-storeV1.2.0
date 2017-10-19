@@ -1,0 +1,43 @@
+<div class="log-in-sign-up">
+
+  <div class="titles">
+    <h3 (click)="toggleTab(0)">Log In</h3>
+    <h3 (click)="toggleTab(1)">Sign Up</h3>
+  </div>
+
+  <md-icon svgIcon="arrow" class="arrow-icon" [ngStyle]="translateArrow()"></md-icon>
+
+  <div class="forms" [ngStyle]="selectTab()">
+
+    <form name="logInForm" #logInForm="ngForm" class="login-form" autocomplete="off"
+          (ngSubmit)="logInForm.valid && logIn(logInForm.value)"
+          novalidate>
+
+      <md-input-container>
+        <input type="text" mdInput (ngModel)="userName" name="userName" placeholder="User name" required>
+        <md-error *ngIf="logInForm.submitted && logInForm.controls.userName.invalid">this field required</md-error>
+      </md-input-container>
+
+      <md-input-container>
+        <input type="password" mdInput (ngModel)="password" name="password" placeholder="password" required>
+        <md-error *ngIf="logInForm.submitted && logInForm.controls.password.invalid">this field required</md-error>
+      </md-input-container>
+
+      <div class="buttons-container">
+        <button type="button" (click)="toggleSignInFlag()" md-button>Close</button>
+        <button type="submit" md-mini-fab style="width: 55px; height: 55px">
+          <md-icon svgIcon="check" style="width: 55%; height: 55%; "></md-icon>
+        </button>
+      </div>
+    </form>
+    <form>
+      <signUp (signInToggleOutPut)="toggleSignInFlag()" [userType]="'Customer'"></signUp>
+    </form>
+
+  </div>
+
+</div>
+
+<div class="sign-in-background" (click)="toggleSignInFlag()"></div>
+
+

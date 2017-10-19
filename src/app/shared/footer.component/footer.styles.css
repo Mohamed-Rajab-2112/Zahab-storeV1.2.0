@@ -1,0 +1,39 @@
+/* line 3, footer.styles.scss */
+footer {
+  padding-top: 25px;
+  font-weight: 100;
+  background-color: #31004a;
+  color: #F5D0CA;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/* line 13, footer.styles.scss */
+footer .links-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto 50px;
+}
+/* line 19, footer.styles.scss */
+footer .links-container a {
+  margin: 0 15px;
+  cursor: pointer;
+}
+/* line 24, footer.styles.scss */
+footer p {
+  margin: 0;
+  text-align: center;
+}
+/* line 27, footer.styles.scss */
+footer p a {
+  color: #fff;
+  transition: 0.3s all;
+}
+/* line 31, footer.styles.scss */
+footer p a:hover {
+  color: #fff;
+  transition: 0.5s all;
+}
