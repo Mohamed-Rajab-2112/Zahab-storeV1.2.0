@@ -79,7 +79,7 @@
 }
 /* line 68, nav.component.styles.scss */
 .nav .above-header-container .above-header-for-width .favourite-container div {
-  background: url('../app/assets/images/heart-icon.png') no-repeat center center;
+  background: url('../../../assets/images/heart-icon.png') no-repeat center center;
   display: flex;
   justify-content: center;
   align-items: center;

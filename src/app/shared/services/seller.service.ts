@@ -10,7 +10,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     email: 'asdasdasd.asdasd.com',
     area: 'عين شمس, القاهره',
-    imageUrl: 'app/images/log01.jpg'
+    imageUrl: 'assets/images/log01.jpg'
   },
   {
     id: 33333,
@@ -20,7 +20,7 @@ const TEMPSELLERS: User[] = [
     userType: 'Vendor',
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'عين شمس, القاهره',
-    imageUrl: 'app/images/log02.png'
+    imageUrl: 'assets/images/log02.png'
   },
   {
     id: 11111,
@@ -31,7 +31,7 @@ const TEMPSELLERS: User[] = [
     userType: 'Vendor',
     verified: true,
     area: 'عين شمس, القاهره',
-    imageUrl: 'app/images/log06.png'
+    imageUrl: 'assets/images/log06.png'
   },
   {
     id: 444,
@@ -42,7 +42,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'عين شمس, القاهره',
     userType: 'Vendor',
-    imageUrl: 'app/images/log03.jpg'
+    imageUrl: 'assets/images/log03.jpg'
   },
   {
     id: 555,
@@ -53,7 +53,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     userType: 'Vendor',
     area: 'عين شمس, القاهره',
-    imageUrl: 'app/images/log04.jpg'
+    imageUrl: 'assets/images/log04.jpg'
   },
   {
     id: 666,
@@ -64,7 +64,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'عين شمس, القاهره',
     userType: 'Vendor',
-    imageUrl: 'app/images/log05.png'
+    imageUrl: 'assets/images/log05.png'
   },
   {
     id: 33333,
@@ -74,7 +74,7 @@ const TEMPSELLERS: User[] = [
     userType: 'Vendor',
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'عين شمس, القاهره',
-    imageUrl: 'app/images/log02.png'
+    imageUrl: 'assets/images/log02.png'
   },
   {
     id: 11111,
@@ -85,7 +85,7 @@ const TEMPSELLERS: User[] = [
     userType: 'Vendor',
     verified: true,
     area: 'مصر الجديده, القاهره',
-    imageUrl: 'app/images/log06.png'
+    imageUrl: 'assets/images/log06.png'
   },
   {
     id: 444,
@@ -96,7 +96,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'مصر الجديده, القاهره',
     userType: 'Vendor',
-    imageUrl: 'app/images/log03.jpg'
+    imageUrl: 'assets/images/log03.jpg'
   },
   {
     id: 555,
@@ -107,7 +107,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     userType: 'Vendor',
     area: 'مصر الجديده, القاهره',
-    imageUrl: 'app/images/log04.jpg'
+    imageUrl: 'assets/images/log04.jpg'
   },
   {
     id: 666,
@@ -118,7 +118,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'مصر الجديده, القاهره',
     userType: 'Vendor',
-    imageUrl: 'app/images/log05.png'
+    imageUrl: 'assets/images/log05.png'
   },
   {
     id: 33333,
@@ -128,7 +128,7 @@ const TEMPSELLERS: User[] = [
     userType: 'Vendor',
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'مصر الجديده, القاهره',
-    imageUrl: 'app/images/log02.png'
+    imageUrl: 'assets/images/log02.png'
   },
   {
     id: 11111,
@@ -139,7 +139,7 @@ const TEMPSELLERS: User[] = [
     userType: 'Vendor',
     verified: true,
     area: 'مصر الجديده, القاهره',
-    imageUrl: 'app/images/log06.png'
+    imageUrl: 'assets/images/log06.png'
   },
   {
     id: 444,
@@ -150,7 +150,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'مصر الجديده, القاهره',
     userType: 'Vendor',
-    imageUrl: 'app/images/log03.jpg'
+    imageUrl: 'assets/images/log03.jpg'
   },
   {
     id: 555,
@@ -161,7 +161,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     userType: 'Vendor',
     area: 'مصر الجديده, القاهره',
-    imageUrl: 'app/images/log04.jpg'
+    imageUrl: 'assets/images/log04.jpg'
   },
   {
     id: 666,
@@ -172,7 +172,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'مصر الجديده, القاهره',
     userType: 'Vendor',
-    imageUrl: 'app/images/log05.png'
+    imageUrl: 'assets/images/log05.png'
   },
   {
     id: 33333,
@@ -182,7 +182,7 @@ const TEMPSELLERS: User[] = [
     userType: 'Vendor',
     address: 'مصر الجديده, القاهره',
     area: 'مصر الجديده, القاهره',
-    imageUrl: 'app/images/log02.png'
+    imageUrl: 'assets/images/log02.png'
   },
   {
     id: 11111,
@@ -193,7 +193,7 @@ const TEMPSELLERS: User[] = [
     userType: 'Vendor',
     verified: true,
     area: 'مصر الجديده, القاهره',
-    imageUrl: 'app/images/log06.png'
+    imageUrl: 'assets/images/log06.png'
   },
   {
     id: 444,
@@ -204,7 +204,7 @@ const TEMPSELLERS: User[] = [
     address: 'مصر الجديده, القاهره',
     area: 'مصر الجديده, القاهره',
     userType: 'Vendor',
-    imageUrl: 'app/images/log03.jpg'
+    imageUrl: 'assets/images/log03.jpg'
   },
   {
     id: 555,
@@ -215,7 +215,7 @@ const TEMPSELLERS: User[] = [
     address: 'مصر الجديده, القاهره',
     userType: 'Vendor',
     area: 'مصر الجديده, القاهره',
-    imageUrl: 'app/images/log04.jpg'
+    imageUrl: 'assets/images/log04.jpg'
   },
   {
     id: 666,
@@ -226,7 +226,7 @@ const TEMPSELLERS: User[] = [
     address: 'ydffhjkhfsdjfhksdfsdf',
     area: 'aaaaaaa',
     userType: 'Vendor',
-    imageUrl: 'app/images/log05.png'
+    imageUrl: 'assets/images/log05.png'
   }
 ];
 
@@ -271,7 +271,7 @@ export class SellerService {
 
     /*this call for prototyping purposes*/
     productDetails.imageUrl.map((x: any) => {
-      x.url = '/app/images/' + x.name;
+      x.url = '/assets/images/' + x.name;
     });
     console.log(productDetails);
     this.jewellery.addProductLocally(productDetails);

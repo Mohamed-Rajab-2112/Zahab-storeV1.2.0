@@ -57,16 +57,16 @@
         <h3>Change password</h3>
 
         <md-input-container>
-          <input placeholder="Old password" mdInput type="password" name="password" [(ngModel)]="password" required>
+          <input placeholder="Old password" mdInput type="password" name="password" (ngModel)="password" required>
         </md-input-container>
 
         <md-input-container>
-          <input placeholder="New password" mdInput type="password" name="newPasword" [(ngModel)]="newPasword" required>
+          <input placeholder="New password" mdInput type="password" name="newPasword" (ngModel)="newPasword" required>
         </md-input-container>
 
         <md-input-container>
           <input placeholder="Re-type new password" mdInput type="password" name="renewPasword"
-                 [(ngModel)]="renewPasword"
+                 (ngModel)="renewPasword"
                  required>
         </md-input-container>
 
@@ -85,12 +85,12 @@
       </form>
     </md-tab>
     <md-tab label="Email">
-      <form #emailForm="ngForm" name="emailForm" (ngSubmit)="emailForm.valid && updateProfileData(email)">
+      <form #emailForm="ngForm" name="emailForm" (ngSubmit)="emailForm.valid && updateProfileData(emailForm.value)">
 
         <h3>Change email</h3>
 
         <md-input-container>
-          <input placeholder="Email" mdInput type="email" name="email" [(ngModel)]="currentCustomer.email" required>
+          <input placeholder="Email" mdInput type="email" name="email" (ngModel)="currentCustomer.email" required>
           <em *ngIf="emailForm.submitted && emailForm.controls?.email.invalid">this field required</em>
         </md-input-container>
 

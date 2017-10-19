@@ -11,8 +11,8 @@ import {AuthService} from "../../shared/services/auth.service";
 
 @Component({
   selector: "sllers-list",
-  templateUrl: 'app/seller/seller-list/seller.list.template.html',
-  styleUrls: ['app/seller/seller-list/seller.list.styles.css']
+  templateUrl: './seller.list.template.html',
+  styleUrls: ['./seller.list.styles.css']
 })
 
 export class SellersListComponent implements OnInit, OnDestroy {

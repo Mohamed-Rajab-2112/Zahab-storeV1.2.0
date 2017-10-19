@@ -18,9 +18,9 @@ var RegisteredIcons = (function () {
         this.sanitizer = sanitizer;
     }
     RegisteredIcons.prototype.addRegisteredSvgIcons = function () {
-        this.iconRegistry.addSvgIcon('arrow', this.sanitizer.bypassSecurityTrustResourceUrl('app/assets/images/arrow.svg'));
-        this.iconRegistry.addSvgIcon('check', this.sanitizer.bypassSecurityTrustResourceUrl('app/assets/images/check.svg'));
-        this.iconRegistry.addSvgIcon('info', this.sanitizer.bypassSecurityTrustResourceUrl('app/assets/images/info-icon.svg'));
+        this.iconRegistry.addSvgIcon('arrow', this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/arrow.svg'));
+        this.iconRegistry.addSvgIcon('check', this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/check.svg'));
+        this.iconRegistry.addSvgIcon('info', this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/info-icon.svg'));
     };
     return RegisteredIcons;
 }());

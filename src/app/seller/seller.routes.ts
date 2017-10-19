@@ -8,11 +8,11 @@ import {
 
 import {
   VendorProfileActivator,
-  JewelleryAndSellerDetailsActivator
+  SellerDetailsActivator
 } from '../shared/index'
 
 export const sellerRoutes: Routes = [
   {path: "vendor-profile", component: SellerProfileComponent, canActivate: [VendorProfileActivator]},
-  {path: "sellers-list/:id", component: SellerDetailsComponent, canActivate: [JewelleryAndSellerDetailsActivator]},
+  {path: "sellers-list/:id", component: SellerDetailsComponent, canActivate: [SellerDetailsActivator]},
   {path: '', redirectTo: "/home", pathMatch: "prefix"}
 ];

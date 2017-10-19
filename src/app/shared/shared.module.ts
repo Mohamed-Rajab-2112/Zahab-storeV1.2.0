@@ -18,16 +18,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 
 import {
   MdButtonModule,
-  MdCheckboxModule,
-  MdInputModule,
+  MdInputModule,         /*change by bootstrap input*/
   MdIconModule,
-  MdTooltipModule,
   MdCardModule,
-  MdAutocompleteModule,
-  MdSelectModule,
-  MdDialogModule,
-  MdTabsModule,
-  MdMenuModule
+  MdAutocompleteModule,  /*change by typeahead bootstrap*/
+  MdSelectModule,        /*change by dropdown bootstrap*/
+  MdDialogModule,        /*change by personal custom dialog component*/
+  MdTabsModule,          /*change by tabs bootstrap*/
 } from '@angular/material';
 
 @NgModule({
@@ -37,16 +34,13 @@ import {
     ReactiveFormsModule,
     NgbModule,
     MdButtonModule,
-    MdCheckboxModule,
     MdInputModule,
     MdIconModule,
-    MdTooltipModule,
     MdCardModule,
     MdAutocompleteModule,
     MdSelectModule,
     MdDialogModule,
-    MdTabsModule,
-    MdMenuModule
+    MdTabsModule
   ],
   declarations: [
     JewelleryThumbnailComponent,
@@ -76,16 +70,13 @@ import {
     SignUpComponent,
     NgbModule,
     MdButtonModule,
-    MdCheckboxModule,
     MdInputModule,
     MdIconModule,
-    MdTooltipModule,
     MdCardModule,
     MdAutocompleteModule,
     MdSelectModule,
     MdDialogModule,
-    MdTabsModule,
-    MdMenuModule
+    MdTabsModule
   ]
 })
 

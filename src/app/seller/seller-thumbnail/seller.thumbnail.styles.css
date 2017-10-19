@@ -6,6 +6,7 @@ md-card {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
 }
 /* line 10, seller.thumbnail.styles.scss */
 md-card:focus {

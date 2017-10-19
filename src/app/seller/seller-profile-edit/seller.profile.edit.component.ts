@@ -20,6 +20,9 @@ export class SellerProfileEditComponent implements OnInit, OnDestroy {
   addressForm: FormGroup;
   areaControl: FormControl;
   addressControl: FormControl;
+  password: string;
+  newPasword: string;
+  renewPasword: string;
 
   constructor(private jewellery: JewelleryService, private seller: SellerService, private auth: AuthService, private sanitizer: DomSanitizer) {
   }

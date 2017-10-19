@@ -3,7 +3,7 @@
 </div>
 
 <button class="small-width-search-btn" (click)="toggleSearchForm()">
-  <img src="app/assets/images/search-icon.svg">
+  <img src="assets/images/search-icon.svg">
 </button>
 
 <md-icon svgIcon="arrow" class="arrow-icon" [hidden]="toggleBackdrop"></md-icon>
@@ -44,7 +44,7 @@
     [disabled]="searchForm.controls.productName?.errors?.required && !sellerName && searchForm.controls.area?.errors?.required"
     type="submit"
     class="btn">
-    <img src="app/assets/images/search-icon.svg">
+    <img src="assets/images/search-icon.svg">
   </button>
 
 </form>

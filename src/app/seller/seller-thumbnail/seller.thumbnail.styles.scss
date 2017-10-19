@@ -1,4 +1,4 @@
-@import "../../assets/stylesheets/colors-theme";
+@import "../../../assets/stylesheets/colors-theme";
 
 md-card {
   cursor: pointer;
@@ -7,6 +7,7 @@ md-card {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: $bgcolor;
   &:focus {
     outline: none;
   }

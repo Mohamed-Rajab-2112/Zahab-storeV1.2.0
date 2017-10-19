@@ -18,6 +18,9 @@ export class CustomerProfile implements OnInit, OnDestroy {
   areaControl: FormControl;
   nameControl: FormControl;
   filteredAreas: Observable<string[]>;
+  password:string;
+  newPasword:string;
+  renewPasword:string;
 
   constructor(private auth: AuthService, private customer: CustomerService, private jewellery: JewelleryService) {
   }
@@ -57,7 +60,6 @@ export class CustomerProfile implements OnInit, OnDestroy {
   }
 
   saveNewPassword(newPassword: string) {
-    console.log(newPassword);
     this.auth.saveNewPassword(newPassword);
   }
 

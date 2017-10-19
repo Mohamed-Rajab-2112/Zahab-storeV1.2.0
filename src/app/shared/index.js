@@ -8,7 +8,7 @@ __export(require("./services/jewellery.service"));
 __export(require("./nav.component/nav.component"));
 __export(require("./footer.component/footer.component"));
 __export(require("./services/seller.service"));
-__export(require("./services/jewellery.details.and.seller.details.activator"));
+__export(require("./services/jewellery.details.activator.ts"));
 __export(require("./services/default.redirect.activator"));
 __export(require("./services/jewellery.list.activator"));
 var signin_signup_component_1 = require("./signin.signup.component/signin.signup.component");

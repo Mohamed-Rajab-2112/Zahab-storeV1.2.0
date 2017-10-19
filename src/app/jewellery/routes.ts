@@ -11,13 +11,16 @@ import {
   SellersListComponent
 } from "../index"
 
-import {JewelleryAndSellerDetailsActivator, DefaultRedirectActivator, JewelleryListActivator} from '../index'
+import {JewelleryDetailsActivator, DefaultRedirectActivator, JewelleryListActivator} from '../index'
 
 export const appRoutes: Routes = [
   {path: "home", component: JewelleryHomeComponent},
   {path: "home/sellers-list", component: SellersListComponent},
   {path: "home/:type", component: JewelleryListComponent, canActivate: [JewelleryListActivator]},
-  {path: "home/:type/:id", component: JewelleryDetailsComponent, canActivate: [JewelleryAndSellerDetailsActivator]},
+  {
+    path: "home/:type/:id", component: JewelleryDetailsComponent,
+    canActivate: [JewelleryDetailsActivator]
+  },
   {path: "search/:terms", component: JewellerySearchResultsComponent},
   {
     path: "seller",

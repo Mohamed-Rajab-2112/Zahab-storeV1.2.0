@@ -3,8 +3,8 @@ import {JewelleryService} from "../../shared/services/jewellery.service";
 import {JeweleryProduct} from "../../shared/models/jewelleryProduct.model";
 @Component({
   selector: 'products-filter',
-  templateUrl: 'app/seller/seller-products-filter/seller.products.filter.template.html',
-  styleUrls: ['app/seller/seller-products-filter/seller.products.filter.styles.css']
+  templateUrl: './seller.products.filter.template.html',
+  styleUrls: ['./seller.products.filter.styles.css']
 })
 
 export class SellerProductsFilter implements OnInit, OnChanges {

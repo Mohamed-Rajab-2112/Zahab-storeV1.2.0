@@ -9,7 +9,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "18K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -24,7 +24,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "24K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -39,13 +39,13 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     },{
       name: '02.png',
-      url: "/app/images/02.png"
+      url: "assets/images/02.png"
     },{
       name: '03.png',
-      url: "/app/images/03.png"
+      url: "assets/images/03.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -60,7 +60,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -75,7 +75,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -90,7 +90,7 @@ const tempJewellery: JeweleryProduct[] = [
     area: "aaa",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -105,7 +105,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "24K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -120,13 +120,13 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     },{
       name: '02.png',
-      url: "/app/images/02.png"
+      url: "assets/images/02.png"
     },{
       name: '03.png',
-      url: "/app/images/03.png"
+      url: "assets/images/03.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -141,7 +141,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -155,7 +155,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -169,7 +169,7 @@ const tempJewellery: JeweleryProduct[] = [
     area: "aaa",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -183,7 +183,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "24K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -197,13 +197,13 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     },{
       name: '02.png',
-      url: "/app/images/02.png"
+      url: "assets/images/02.png"
     },{
       name: '03.png',
-      url: "/app/images/03.png"
+      url: "assets/images/03.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -218,7 +218,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -232,7 +232,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -246,7 +246,7 @@ const tempJewellery: JeweleryProduct[] = [
     area: "aaa",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -260,7 +260,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "24K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -274,13 +274,13 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     },{
       name: '02.png',
-      url: "/app/images/02.png"
+      url: "assets/images/02.png"
     },{
       name: '03.png',
-      url: "/app/images/03.png"
+      url: "assets/images/03.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -295,7 +295,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -309,7 +309,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -323,7 +323,7 @@ const tempJewellery: JeweleryProduct[] = [
     area: "aaa",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -337,7 +337,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "24K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -351,13 +351,13 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     },{
       name: '02.png',
-      url: "/app/images/02.png"
+      url: "assets/images/02.png"
     },{
       name: '03.png',
-      url: "/app/images/03.png"
+      url: "assets/images/03.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -372,7 +372,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -386,7 +386,7 @@ const tempJewellery: JeweleryProduct[] = [
     area: "aaa",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -400,7 +400,7 @@ const tempJewellery: JeweleryProduct[] = [
     area: "aaa",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -414,13 +414,13 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     },{
       name: '02.png',
-      url: "/app/images/02.png"
+      url: "assets/images/02.png"
     },{
       name: '03.png',
-      url: "/app/images/03.png"
+      url: "assets/images/03.png"
     }],
     publishDate: "5/5/2017",
     description: 'Some stubid description goes here'
@@ -435,7 +435,7 @@ const tempJewellery: JeweleryProduct[] = [
     goldDegree: "21K",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -449,7 +449,7 @@ const tempJewellery: JeweleryProduct[] = [
     area: "aaa",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   },
@@ -463,7 +463,7 @@ const tempJewellery: JeweleryProduct[] = [
     area: "aaa",
     imageUrl: [{
       name: '01.png',
-      url: "/app/images/01.png"
+      url: "assets/images/01.png"
     }],
     publishDate: "5/5/2017"
   }

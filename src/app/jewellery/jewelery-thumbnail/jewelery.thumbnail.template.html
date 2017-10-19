@@ -2,14 +2,15 @@
   <md-card *ngFor="let product of products" class="product-thumbnail">
 
     <div *ngIf="showEditDelBtn" class="button-container">
-      <button (click)="editProduct(product)"><img src="app/assets/images/edit-icon.svg">edit</button>
-      <button (click)="deleteProduct(product)"><img src="app/assets/images/cross-icon.svg">delete</button>
+      <button (click)="editProduct(product)"><img src="assets/images/edit-icon.svg">edit</button>
+      <button (click)="deleteProduct(product)"><img src="assets/images/cross-icon.svg">delete</button>
     </div>
 
     <jewellery-favourite-button class="fav-btn" [product]="product" *ngIf="showFavouriteBtn"
                                 [isFavourite]="favouriteBtnStatus(product)"></jewellery-favourite-button>
 
-    <div (click)="routingToJewelleryDetails(product?.type, product?.id)" class="card-details">
+    <div
+      (click)="routingToJewelleryDetails(product?.type, product?.id)" class="card-details">
       <img [src]="product?.imageUrl[0].url">
       <h3>{{product?.productName}}</h3>
       <h3>{{product?.sellerName}}</h3>

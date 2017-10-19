@@ -115,14 +115,14 @@
             (ngSubmit)="passwordForm.valid && saveNewPassword(passwordForm.value.newPasword)" class="form-section">
         <h3>Change password</h3>
         <md-input-container>
-          <input mdInput placeholder="Old password" type="password" name="password" [(ngModel)]="password" required>
+          <input mdInput placeholder="Old password" type="password" name="password" (ngModel)="password" required>
         </md-input-container>
         <md-input-container>
-          <input mdInput placeholder="New password" type="password" name="newPasword" [(ngModel)]="newPasword" required>
+          <input mdInput placeholder="New password" type="password" name="newPasword" (ngModel)="newPasword" required>
         </md-input-container>
         <md-input-container>
           <input mdInput placeholder="Re-type new password" type="password" name="renewPasword"
-                 [(ngModel)]="renewPasword"
+                 (ngModel)="renewPasword"
                  required>
         </md-input-container>
         <em

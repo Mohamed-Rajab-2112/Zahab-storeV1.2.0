@@ -4,8 +4,8 @@ import {RegisteredIcons} from "../services/registered.icons.service"
 
 @Component({
   selector: 'signin-signup',
-  templateUrl: 'app/shared/signin.signup.component/signin.signup.template.html',
-  styleUrls: ['app/shared/signin.signup.component/signin.signup.styles.css'],
+  templateUrl: './signin.signup.template.html',
+  styleUrls: ['./signin.signup.styles.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
@@ -18,6 +18,8 @@ export class SinginSignUpComponent implements OnInit {
   choosedUserType: string;
   signUpNameStyle: string;
   logInNameStyle: string;
+  userName: string;
+  password: string;
 
   constructor(private auth: AuthService, private rgisteredIcons: RegisteredIcons) {
   }

@@ -4,7 +4,7 @@ import {JewelleryService} from "./jewellery.service";
 import {SellerService} from "./seller.service";
 @Injectable()
 
-export class JewelleryAndSellerDetailsActivator implements CanActivate {
+export class JewelleryDetailsActivator implements CanActivate {
   constructor(private jewellery: JewelleryService, private seller: SellerService, private router: Router) {
   }
 

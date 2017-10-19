@@ -9,8 +9,8 @@ import {
 
 @Component({
   selector: 'seller-details',
-  templateUrl: 'app/seller/seller-details/seller.details.template.html',
-  styleUrls: ['app/seller/seller-details/seller.details.styles.css']
+  templateUrl: './seller.details.template.html',
+  styleUrls: ['./seller.details.styles.css']
 })
 
 export class SellerDetailsComponent implements OnInit {
