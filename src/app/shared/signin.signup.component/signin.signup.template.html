@@ -15,7 +15,7 @@
 
       <md-input-container>
         <input type="text" mdInput (ngModel)="userName" name="userName" placeholder="User name" required>
-        <md-error *ngIf="logInForm.submitted && logInForm.controls.userName.invalid">this field required</md-error>
+        <md-error>this field required</md-error>
       </md-input-container>
 
       <md-input-container>
@@ -24,9 +24,10 @@
       </md-input-container>
 
       <div class="buttons-container">
-        <button type="button" (click)="toggleSignInFlag()" md-button>Close</button>
-        <button type="submit" md-mini-fab style="width: 55px; height: 55px">
-          <md-icon svgIcon="check" style="width: 55%; height: 55%; "></md-icon>
+        <button type="button" class="btn btn-default close-btn" (click)="toggleSignInFlag()">Close</button>
+        <button type="submit" class="btn btn-primary submit">
+          Submit
+          <!--<md-icon svgIcon="check" style="width: 55%; height: 55%; "></md-icon>-->
         </button>
       </div>
     </form>
@@ -39,5 +40,3 @@
 </div>
 
 <div class="sign-in-background" (click)="toggleSignInFlag()"></div>
-
-

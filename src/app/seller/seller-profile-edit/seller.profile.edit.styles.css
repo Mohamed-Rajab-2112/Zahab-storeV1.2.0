@@ -3,9 +3,10 @@
   display: flex;
   flex-direction: column;
   width: 70%;
-  margin: 0 auto;
+  margin: 25px auto 0;
+  padding-bottom: 50px;
 }
-/* line 8, seller.profile.edit.styles.scss */
+/* line 9, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .form-section {
   display: flex;
   flex-direction: column;
@@ -14,7 +15,7 @@
   padding: 25px;
   margin-bottom: 30px;
 }
-/* line 15, seller.profile.edit.styles.scss */
+/* line 16, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .form-section button {
   width: 200px;
   margin: 25px auto 0;
@@ -23,26 +24,26 @@
   border: none;
   transition: 0.5s all;
 }
-/* line 19, seller.profile.edit.styles.scss */
+/* line 20, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .form-section button:hover {
   color: #F5D0CA;
   background-color: #31004a;
   transition: 0.5s all;
 }
-/* line 23, seller.profile.edit.styles.scss */
+/* line 24, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .form-section .logo-image-container {
   margin-bottom: 35px;
 }
-/* line 25, seller.profile.edit.styles.scss */
+/* line 26, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .form-section .logo-image-container img {
   display: inline;
   width: 50%;
 }
-/* line 29, seller.profile.edit.styles.scss */
+/* line 30, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .form-section .logo-image-container button {
   display: inline;
 }
-/* line 34, seller.profile.edit.styles.scss */
+/* line 35, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .upload-logo-btn {
   text-align: center;
   cursor: pointer;
@@ -55,48 +56,49 @@
   border: none;
   transition: 0.5s all;
 }
-/* line 42, seller.profile.edit.styles.scss */
+/* line 43, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .upload-logo-btn:hover {
   transition: 0.25s all;
   color: #F5D0CA;
   background-color: #31004a;
   transition: 0.5s all;
 }
-/* line 47, seller.profile.edit.styles.scss */
+/* line 48, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .alert {
   margin-top: 25px;
 }
-/* line 51, seller.profile.edit.styles.scss */
+/* line 52, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
 }
-/* line 55, seller.profile.edit.styles.scss */
+/* line 57, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user svg {
   width: 25px;
 }
-/* line 57, seller.profile.edit.styles.scss */
+/* line 59, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user svg .a {
   fill: white;
 }
-/* line 60, seller.profile.edit.styles.scss */
+/* line 62, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user svg .b {
   fill: red;
 }
-/* line 64, seller.profile.edit.styles.scss */
+/* line 66, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user p {
   margin-bottom: 0;
 }
-/* line 69, seller.profile.edit.styles.scss */
+/* line 71, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .deactivate-tab {
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-/* line 76, seller.profile.edit.styles.scss */
+/* line 78, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .deactivate-tab button {
   color: white;
   width: 300px;

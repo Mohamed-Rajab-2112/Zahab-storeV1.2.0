@@ -1,8 +1,9 @@
-@import "../../assets/stylesheets/colors-theme";
+@import "../../../assets/stylesheets/colors-theme";
 
 .jewellery-filter-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   width: 80%;
   margin: 0 auto 50px;
   //border: 1px solid black;
@@ -14,6 +15,7 @@
     button {
       @include button-default;
       width: 100px;
+      height: 40px;
       text-transform: capitalize;
       margin-right: 5px;
     }
@@ -21,8 +23,16 @@
       @include button-focused;
     }
   }
-
+  .select-button {
+    //text-align: center;
+    //width: 120px;
+    margin-left: 15px;
+  }
 }
+
+/*******************/
+/*Responsive styles*/
+/*******************/
 
 @media screen and (max-width: 1024px) {
   .jewellery-filter-container {
@@ -33,7 +43,6 @@
     }
     div:last-child {
       margin-top: 35px;
-      //width: ;
     }
   }
 }

@@ -2,32 +2,33 @@
 form {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 25px auto 0;
+  width: 80%;
   height: 100%;
 }
-/* line 8, seller.add.product.styles.scss */
+/* line 9, seller.add.product.styles.scss */
 form .form-field-container {
   margin-bottom: 25px;
   width: 100%;
 }
-/* line 11, seller.add.product.styles.scss */
+/* line 12, seller.add.product.styles.scss */
 form .form-field-container > * {
   width: 100%;
 }
-/* line 15, seller.add.product.styles.scss */
-form button {
+/* line 17, seller.add.product.styles.scss */
+form .d-inline-block > button {
   color: #31004a;
   background-color: #F5D0CA;
   border: none;
   transition: 0.5s all;
 }
-/* line 17, seller.add.product.styles.scss */
-form button:hover {
+/* line 19, seller.add.product.styles.scss */
+form .d-inline-block > button:hover {
   color: #F5D0CA;
   background-color: #31004a;
   transition: 0.5s all;
 }
-/* line 21, seller.add.product.styles.scss */
+/* line 24, seller.add.product.styles.scss */
 form .upload-btn {
   padding: 5px;
   cursor: pointer;
@@ -36,22 +37,22 @@ form .upload-btn {
   border: none;
   transition: 0.5s all;
 }
-/* line 25, seller.add.product.styles.scss */
+/* line 28, seller.add.product.styles.scss */
 form .upload-btn:hover {
   color: #F5D0CA;
   background-color: #31004a;
   transition: 0.5s all;
 }
-/* line 29, seller.add.product.styles.scss */
+/* line 32, seller.add.product.styles.scss */
 form .prod-img-thumbnail-container {
   margin-bottom: 25px;
 }
-/* line 31, seller.add.product.styles.scss */
+/* line 34, seller.add.product.styles.scss */
 form .prod-img-thumbnail-container img {
   width: 150px;
   margin-bottom: 15px;
 }
-/* line 36, seller.add.product.styles.scss */
+/* line 39, seller.add.product.styles.scss */
 form .dialog-buttons {
   display: flex;
   justify-content: space-around;

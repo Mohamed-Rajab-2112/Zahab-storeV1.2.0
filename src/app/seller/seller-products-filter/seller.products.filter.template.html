@@ -11,14 +11,26 @@
   </div>
 
   <div>
-    <md-select [(ngModel)]="selectedDegree" [placeholder]="'Filter by gold degree'" (change)="filterByTerms()">
-      <md-option [value]="'All'">All</md-option>
-      <md-option *ngFor="let goldDegree of goldDegrees" [value]="goldDegree">{{goldDegree}}</md-option>
-    </md-select>
 
-    <md-select [(ngModel)]="priceSort" [placeholder]="'Sort by price'" (change)="sortByPrice()">
-      <md-option [value]="'Lowest first'">Lowest first</md-option>
-      <md-option [value]="'Highest first'">Highest first</md-option>
-    </md-select>
+    <div ngbDropdown class="d-inline-block">
+      <h4>Gold degree</h4>
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{selectedDegree}}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
+        <button class="dropdown-item" *ngFor="let goldDegree of goldDegrees" (click)="setGoldDegree(goldDegree)">
+          {{goldDegree}}
+        </button>
+        <button class="dropdown-item" (click)="setGoldDegree('All')">All</button>
+      </div>
+    </div>
+
+    <div ngbDropdown class="d-inline-block select-button">
+      <h4>Sort by price</h4>
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{priceSort}}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
+        <button class="dropdown-item" (click)="setPriceSort('Lowest first')">Lowest first</button>
+        <button class="dropdown-item" (click)="setPriceSort('Highest first')">Highest first</button>
+      </div>
+    </div>
+
   </div>
 </div>

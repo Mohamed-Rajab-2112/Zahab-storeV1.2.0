@@ -59,7 +59,7 @@ import {SellerDetailsActivator} from "./shared/services/seller.details.activator
     SellersListComponent,
     NavComponent,
     FooterComponent,
-    JewellerySearchForm
+    JewellerySearchForm,
   ],
   bootstrap: [JewelleryStoreAppComponent],
   providers: [

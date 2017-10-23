@@ -26,17 +26,16 @@ export class SignUpComponent implements OnInit {
   password2: FormControl;
 
   constructor(private auth: AuthService, private jewellery: JewelleryService) {
-
   }
 
   ngOnInit() {
     this.userName = new FormControl('', Validators.required);
     this.email = new FormControl('', [Validators.required, Validators.email]);
-    this.area = new FormControl('', Validators.required);
+    // this.area = new FormControl('', Validators.required);
     this.phoneNumber = new FormControl('', Validators.required);
     /*dummy value for area and number of customer to skip signup for validation*/
     if (this.userType === 'Customer') {
-      this.area = new FormControl('dummyValue', Validators.required);
+      // this.area = new FormControl('dummyValue', Validators.required);
       this.phoneNumber = new FormControl(111, Validators.required);
     }
     this.password = new FormControl('', Validators.required);
@@ -45,36 +44,43 @@ export class SignUpComponent implements OnInit {
     this.signupForm = new FormGroup({
       userName: this.userName,
       email: this.email,
-      area: this.area,
+      // area: this.area,
       phoneNumber: this.phoneNumber,
       password: this.password,
       password2: this.password2,
     });
     /*filter autocomplete values*/
-    this.filteredAreas = this.area.valueChanges.startWith(null).map(val => val ? this.filterAreas(val) : this.areas.slice());
+    // this.filteredAreas = this.area.valueChanges.startWith(null).map(val => val ? this.filterAreas(val) : this.areas.slice());
 
     this.areas = this.jewellery.getAreas()
   }
 
-  filterAreas(val: string) {
-    let filteredAreas = this.areas.filter((option) => {
-      return option.toLowerCase().indexOf(val.toLowerCase()) === 0;
-    });
-    this.showNoAreaFound = !filteredAreas.length;
+  // filterAreas(val: string) {
+  //   let filteredAreas = this.areas.filter((option) => {
+  //     return option.toLowerCase().indexOf(val.toLowerCase()) === 0;
+  //   });
+  //   this.showNoAreaFound = !filteredAreas.length;
+  //
+  //   return filteredAreas;
+  // }
 
-    return filteredAreas;
+  selectedArea(area) {
+    this.area = area;
   }
 
   signUp(values: any) {
     values.signUpDate = new Date(Date.now()).toISOString();
     values.userType = this.userType;
+    values.area = this.area;
+    delete values.password2;
     if (this.userType === 'Customer') {
       this.signInToggleOutPut.emit();
-      delete values.area;
+      // delete values.area;
       delete values.phoneNumber;
+      this.auth.signUp(values);
+    } else {
+      values.area && this.auth.signUp(values);
     }
-    delete values.password2;
-    this.auth.signUp(values);
   }
 
   toggleSignInFlag() {

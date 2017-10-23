@@ -14,13 +14,14 @@ export class CustomerProfile implements OnInit, OnDestroy {
   currentCustomer: User;
   userSubscription: any;
   areas: string[];
+  area: string;
   profileForm: FormGroup;
   areaControl: FormControl;
   nameControl: FormControl;
   filteredAreas: Observable<string[]>;
-  password:string;
-  newPasword:string;
-  renewPasword:string;
+  password: string;
+  newPasword: string;
+  renewPasword: string;
 
   constructor(private auth: AuthService, private customer: CustomerService, private jewellery: JewelleryService) {
   }
@@ -33,7 +34,7 @@ export class CustomerProfile implements OnInit, OnDestroy {
       this.currentCustomer = <User>val;
     });
 
-    this.areaControl = new FormControl(this.currentCustomer.area);
+    // this.areaControl = new FormControl(this.currentCustomer.area);
     this.nameControl = new FormControl(this.currentCustomer.name, [Validators.required]);
 
     this.profileForm = new FormGroup(
@@ -43,19 +44,24 @@ export class CustomerProfile implements OnInit, OnDestroy {
       }
     );
 
-    this.filteredAreas = this.areaControl.valueChanges.startWith(null).map((val: string) => val ? this.filter(val, this.areas) : this.areas.slice());
+    // this.filteredAreas = this.areaControl.valueChanges.startWith(null).map((val: string) => val ? this.filter(val, this.areas) : this.areas.slice());
   }
 
   ngOnDestroy() {
     this.userSubscription.unsubscribe();
   }
 
-  filter(val: string, data: string[]): string[] {
-    return data.filter((type) => new RegExp(`^${val}`, 'gi').test(type));
+  // filter(val: string, data: string[]): string[] {
+  //   return data.filter((type) => new RegExp(`^${val}`, 'gi').test(type));
+  // }
+
+  selectedArea(area) {
+    this.area = area;
   }
 
   updateProfileData(values: any) {
     console.log(values);
+    values.area = this.area;
     this.customer.updateProfileData(values);
   }
 

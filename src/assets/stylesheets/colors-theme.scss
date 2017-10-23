@@ -34,4 +34,7 @@ $smallScreenWidth: 95%;
   transition: 0.5s all;
 }
 
-$thumbnailsContainerHeight: 500px;
+@mixin no-background-btn {
+}
+
+$thumbnailsContainerHeight: 600px;

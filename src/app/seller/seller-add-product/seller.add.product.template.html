@@ -1,9 +1,17 @@
-<!--<div class="add-product-form">-->
-<form autocomplete="off" #productForm="ngForm" novalidate
-      (ngSubmit)="productForm.valid && publishProduct(productForm.value)" md-dialog-content>
 
-  <!--<div class="form-field-container">-->
-  <!--<label>Name</label>-->
+
+
+<div class="modal-header">
+  <h4 class="modal-title">{{product.productName || 'Add new Jewellery'}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="dialogRef.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<form autocomplete="off" #productForm="ngForm" novalidate
+      (ngSubmit)="product.type && product.goldDegree && productForm.valid && publishProduct(productForm.value)"
+      md-dialog-content>
+
   <div class="form-field-container">
     <md-input-container>
       <input type="text" mdInput name="productName" placeholder="Product Name..." [(ngModel)]="product.productName"
@@ -12,14 +20,9 @@
     <em *ngIf="productForm.submitted && productForm.controls?.productName.invalid">This field is required</em>
   </div>
 
-  <!--</div>-->
-
   <div class="form-field-container">
-    <!--<div class="form-field-container">-->
-    <!--<label>Product Image</label>-->
     <label for="imagesInput" class="upload-btn">Upload Photos</label>
     <em *ngIf="productForm.submitted && !imageUrlValid">Product image required</em>
-    <!--</div>-->
   </div>
 
   <input type="file" name="imageUrl" (change)="getImageUrl($event)" multiple id="imagesInput" accept="image/*"
@@ -32,24 +35,19 @@
       <button (click)="deleteImage(image)" md-raised-button>Delete image</button>
     </div>
   </div>
-  <!--<em>You can't upload more than 3 images for the same product</em>-->
 
-  <!--<div class="form-field-container">-->
-  <!--<label>Product type</label>-->
-
-  <div class="form-field-container">
-    <md-select name="type" [(ngModel)]="product.type" placeholder="Product type"
-               class="last-child" required>
-      <!--<md-option [hidden]="product.type">{{product.type}}</md-option>-->
-      <md-option *ngFor="let type of productTypes" [value]="type">{{type}}</md-option>
-    </md-select>
-    <em *ngIf="productForm.submitted && productForm.value.type == undefined">this field
-      required</em>
+  <div ngbDropdown class="d-inline-block">
+    <h4>product type</h4>
+    <button class="btn btn-outline-primary" type="button" id="dropdownBasic1" ngbDropdownToggle>{{product.type ?
+      product.type :
+      '-Choose product type-'}}
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
+      <button type="button" class="dropdown-item" *ngFor="let type of productTypes" (click)="setType(type)">{{type}}
+      </button>
+    </div>
+    <em *ngIf="productForm.submitted && product.type == undefined" style="display: block">this field required</em>
   </div>
-
-  <!--</div>-->
-
-  <!--<label>Price for 1 gram (includes taxes and working cost L.E)</label>-->
 
   <div class="form-field-container">
     <md-input-container>
@@ -59,22 +57,29 @@
     <em *ngIf="productForm.submitted && productForm.controls?.price.invalid">This field is required</em>
   </div>
 
-  <!--<fieldset>-->
-  <!--<label>Gold Degree</label>-->
-
   <div class="form-field-container">
-    <md-select name="goldDegree" [(ngModel)]="product.goldDegree" placeholder="Gold Degree" required>
-      <!--<option [hidden]="product.goldDegree">{{product.goldDegree}}</option>-->
-      <md-option *ngFor="let gold of goldDegrees" [value]="gold">{{gold}}</md-option>
-    </md-select>
+    <!--<md-select name="goldDegree" [(ngModel)]="product.goldDegree" placeholder="Gold Degree" required>-->
+    <!--<md-option *ngFor="let gold of goldDegrees" [value]="gold">{{gold}}</md-option>-->
+    <!--</md-select>-->
+
+    <div ngbDropdown class="d-inline-block">
+      <h4>product type</h4>
+      <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{product.goldDegree ?
+        product.goldDegree :
+        '-Choose gold degree-'}}
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
+        <button type="button" class="dropdown-item" *ngFor="let type of goldDegrees" (click)="setGoldDegree(type)">
+          {{type}}
+        </button>
+      </div>
+    </div>
     <em *ngIf="productForm.submitted && productForm.value.goldDegree == undefined">This field is
       required</em>
   </div>
-  <!--</fieldset>-->
 
   <div class="dialog-buttons">
-    <button md-raised-button [md-dialog-close]="true">Close</button>
-    <button md-raised-button type="submit">Submit</button>
+    <button (click)="closeDialog()" class="btn btn-default close-btn">Close</button>
+    <button class="btn btn-primary submit" type="submit">Submit</button>
   </div>
 </form>
-<!--</div>-->

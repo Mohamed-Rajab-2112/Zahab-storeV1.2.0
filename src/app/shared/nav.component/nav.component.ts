@@ -4,16 +4,15 @@ import {
   ChangeDetectionStrategy,
   OnDestroy,
   HostListener,
-  Inject,
   ViewEncapsulation
 } from "@angular/core";
 import {Router} from "@angular/router";
-import {DOCUMENT} from '@angular/platform-browser';
 import {JewelleryService} from "../services/jewellery.service";
 import {AuthService} from "../services/auth.service";
 import {CustomerService} from "../services/customer.service";
 import {MdDialog} from "@angular/material";
 import {SignUpDialog} from "../signup.component/signup.dialog.component";
+import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -43,7 +42,7 @@ export class NavComponent implements OnInit, OnDestroy {
   toggleSmallMenuBackground: boolean;
   dialogRef: any;
 
-  constructor(private router: Router, private jewellery: JewelleryService, private auth: AuthService, private customer: CustomerService, @Inject(DOCUMENT) private document: Document, private dialog: MdDialog) {
+  constructor(private router: Router, private jewellery: JewelleryService, private auth: AuthService, private customer: CustomerService, private dialog: MdDialog, private modalService: NgbModal) {
 
   }
 
@@ -146,15 +145,18 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   signupVendor() {
-    this.dialogRef = this.dialog.open(SignUpDialog, {
-      width: '500px'
-    })
+    // this.dialogRef = this.dialog.open(SignUpDialog, {
+    //   width: '500px'
+    // })
+    this.modalService.open(SignUpDialog, {
+      keyboard: true
+    });
   }
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
     let number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    console.log(number);
+    // console.log(number);
     if (number > 35) {
       this.fixedClass = ['fixed'];
       this.hideFixedNavPlaceholder = false;

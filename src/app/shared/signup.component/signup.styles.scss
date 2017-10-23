@@ -1,4 +1,4 @@
-@import "../../assets/stylesheets/colors-theme";
+@import "../../../assets/stylesheets/colors-theme";
 
 form {
   display: flex;
@@ -30,6 +30,7 @@ form {
   }
   .buttons-container {
     width: 100%;
+    margin-top: 25px;
     display: flex;
     justify-content: space-around;
     button:last-child {

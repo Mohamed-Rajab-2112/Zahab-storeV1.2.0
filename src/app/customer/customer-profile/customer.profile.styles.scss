@@ -1,10 +1,11 @@
-@import "../../assets/stylesheets/colors-theme.scss";
+@import "../../../assets/stylesheets/colors-theme.scss";
 
 .customer-profile-container {
   width: $appWidth;
   background-color: $bgcolor;
   margin: 0 auto;
   min-height: 500px;
+  padding-bottom: 50px;
   h2 {
     padding-top: 50px;
     margin-left: 25px;
@@ -56,6 +57,14 @@
   .customer-profile-container {
     margin-top: 25px;
     border: 1px solid $borderColor;
+    .tabs {
+      form {
+        width: 70%;
+      }
+      .delete-container {
+        width: 70%;
+      }
+    }
   }
 }
 
@@ -63,8 +72,12 @@
   .customer-profile-container {
     width: $smallScreenWidth;
     .tabs {
+      width: 90%;
       form {
-        width: 85%;
+        width: 100%;
+      }
+      .delete-container {
+        width: 100%;
       }
     }
   }

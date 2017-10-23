@@ -1,10 +1,11 @@
-@import "../../assets/stylesheets/colors-theme.scss";
+@import "../../../assets/stylesheets/colors-theme.scss";
 
 .seller-profile-edit-container {
   display: flex;
   flex-direction: column;
   width: $appWidth;
-  margin: 0 auto;
+  margin: 25px auto 0;
+  padding-bottom: 50px;
   .form-section {
     display: flex;
     flex-direction: column;
@@ -52,6 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 25px;
     svg {
       width: 25px;
       .a {
@@ -67,7 +69,7 @@
     }
   }
   .deactivate-tab {
-    height: 300px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;

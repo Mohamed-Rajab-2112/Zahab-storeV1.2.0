@@ -3,10 +3,9 @@ jewellery-full-option {
   width: 70%;
 }
 
-@media screen and (max-width: 425px) {
-  /* line 8, jewellery.list.styles.scss */
+@media screen and (max-width: 768px) {
+  /* line 14, jewellery.list.styles.scss */
   jewellery-full-option {
-    margin-top: 50px;
     width: 95%;
   }
 }

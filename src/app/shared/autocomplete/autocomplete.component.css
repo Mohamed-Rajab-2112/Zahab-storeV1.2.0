@@ -1,0 +1,91 @@
+/* line 3, autocomplete.component.scss */
+.autoComplete-container {
+  position: relative;
+  margin: 0;
+}
+/* line 8, autocomplete.component.scss */
+.autoComplete-container input {
+  position: relative;
+  z-index: 92;
+}
+/* line 13, autocomplete.component.scss */
+.autoComplete-container ul {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 25px 5px 5px;
+  z-index: 92;
+  background-color: white;
+}
+/* line 25, autocomplete.component.scss */
+.autoComplete-container ul .item {
+  cursor: pointer;
+}
+/* line 28, autocomplete.component.scss */
+.autoComplete-container ul li {
+  font-family: sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+  list-style: none;
+  font-size: 0.9em;
+  margin-left: 0;
+  padding-right: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid lightgrey;
+}
+/* line 40, autocomplete.component.scss */
+.autoComplete-container ul li:hover {
+  background-color: #eee;
+}
+
+/* line 47, autocomplete.component.scss */
+.backdrop-hidden {
+  display: none;
+}
+
+/* line 51, autocomplete.component.scss */
+.backdrop-shown {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 91;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 63, autocomplete.component.scss */
+  ul {
+    width: 60.5%;
+    top: 135px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 70, autocomplete.component.scss */
+  ul {
+    width: 57.5%;
+  }
+}
+@media screen and (max-width: 425px) {
+  /* line 76, autocomplete.component.scss */
+  ul {
+    width: 68%;
+  }
+}
+@media screen and (max-width: 375px) {
+  /* line 82, autocomplete.component.scss */
+  ul {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 320px) {
+  /* line 88, autocomplete.component.scss */
+  ul {
+    width: 86.5%;
+    top: 143px;
+  }
+}

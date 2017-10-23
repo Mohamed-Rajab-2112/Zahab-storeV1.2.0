@@ -1,4 +1,4 @@
-@import "../../assets/stylesheets/colors-theme";
+@import "../../../assets/stylesheets/colors-theme";
 
 .jewellery-full-option-container {
   display: flex;
@@ -43,7 +43,7 @@
 @media screen and (max-width: 425px) {
   .jewellery-full-option-container {
     //margin-top: 25px;
-    width: 90%;
+    //width: 90%;
     //border: 1px solid black;
   }
 }

@@ -38,9 +38,3 @@
     margin-top: 25px;
   }
 }
-@media screen and (max-width: 425px) {
-  /* line 44, jewellery.full.option.styles.scss */
-  .jewellery-full-option-container {
-    width: 90%;
-  }
-}

@@ -18,14 +18,15 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 
 import {
   MdButtonModule,
-  MdInputModule,         /*change by bootstrap input*/
+  MdInputModule,
   MdIconModule,
   MdCardModule,
-  MdAutocompleteModule,  /*change by typeahead bootstrap*/
-  MdSelectModule,        /*change by dropdown bootstrap*/
+  // MdAutocompleteModule,  /*change by typeahead bootstrap*/
+  // MdSelectModule,        /*change by dropdown bootstrap*/
   MdDialogModule,        /*change by personal custom dialog component*/
-  MdTabsModule,          /*change by tabs bootstrap*/
+  // MdTabsModule,          /*change by tabs bootstrap*/
 } from '@angular/material';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 @NgModule({
   imports: [
@@ -37,10 +38,10 @@ import {
     MdInputModule,
     MdIconModule,
     MdCardModule,
-    MdAutocompleteModule,
-    MdSelectModule,
+    // MdAutocompleteModule,
+    // MdSelectModule,
     MdDialogModule,
-    MdTabsModule
+    // MdTabsModule
   ],
   declarations: [
     JewelleryThumbnailComponent,
@@ -52,7 +53,8 @@ import {
     SellerAddComponent,
     DialogComponent,
     SignUpComponent,
-    SignUpDialog
+    SignUpDialog,
+    AutocompleteComponent
   ],
   entryComponents: [
     SellerAddComponent,
@@ -68,15 +70,16 @@ import {
     SellerAddComponent,
     DialogComponent,
     SignUpComponent,
+    AutocompleteComponent,
     NgbModule,
     MdButtonModule,
     MdInputModule,
     MdIconModule,
     MdCardModule,
-    MdAutocompleteModule,
-    MdSelectModule,
+    // MdAutocompleteModule,
+    // MdSelectModule,
     MdDialogModule,
-    MdTabsModule
+    // MdTabsModule
   ]
 })
 

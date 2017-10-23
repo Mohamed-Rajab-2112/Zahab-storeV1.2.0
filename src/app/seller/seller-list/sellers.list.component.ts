@@ -43,13 +43,14 @@ export class SellersListComponent implements OnInit, OnDestroy {
     this.filterSellersForm = new FormGroup({
       stateCtrl: this.stateCtrl
     });
-    this.filteredAreas = this.stateCtrl.valueChanges
-      .startWith(null)
-      .map(name => this.filterAreas(name));
+    // this.filteredAreas = this.stateCtrl.valueChanges
+    //   .startWith(null)
+    //   .map(name => this.filterAreas(name));
     this.sellerList = this.seller.getSeller();
     this.page = 1;
     this.pageSize = 15;
     this.viewList = this.sellerList.slice((this.page - 1) * this.pageSize, this.page * this.pageSize);
+    this.filteredList = [];
     this.paginationLength = this.sellerList.length;
   }
 
@@ -57,18 +58,18 @@ export class SellersListComponent implements OnInit, OnDestroy {
     this.showVerifiedVendorAlertSubscribetion.unsubscribe();
   }
 
-  filterAreas(val: string) {
-    console.log(val);
-    if (val) {
-      return this.areas.filter(s => new RegExp(`^${val}`, 'gi').test(s))
-    } else {
-      this.viewList = this.sellerList.slice((this.page - 1) * this.pageSize, this.page * this.pageSize);
-      this.paginationLength = this.sellerList.length;
-      this.filteredList = [];
-      this.page = 1;
-      return this.areas;
-    }
-  }
+  // filterAreas(val: string) {
+  //   console.log(val);
+  //   if (val) {
+  //     return this.areas.filter(s => new RegExp(`^${val}`, 'gi').test(s))
+  //   } else {
+  //     this.viewList = this.sellerList.slice((this.page - 1) * this.pageSize, this.page * this.pageSize);
+  //     this.paginationLength = this.sellerList.length;
+  //     this.filteredList = [];
+  //     this.page = 1;
+  //     return this.areas;
+  //   }
+  // }
 
   applyPagination(pageNumber: number) {
     if (this.filteredList.length) {
@@ -76,12 +77,13 @@ export class SellersListComponent implements OnInit, OnDestroy {
     } else {
       this.viewList = this.sellerList.slice((pageNumber - 1) * this.pageSize, pageNumber * this.pageSize);
     }
-
     console.log(pageNumber)
   }
 
   filterSellers(area: string) {
     this.page = 1;
+    console.log(area);
+    console.log(this.sellerList.length);
     this.filteredList = this.sellerList.filter((seller) => {
       return seller.area.includes(area)
     });

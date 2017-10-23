@@ -26,31 +26,29 @@
 /* line 24, seller.list.styles.scss */
 .sellers-list-container form .field {
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
+  padding: 10px;
   background-color: #fff;
   border-radius: 3px;
 }
-/* line 31, seller.list.styles.scss */
+/* line 32, seller.list.styles.scss */
 .sellers-list-container form .field md-input-container {
   width: 100%;
 }
-/* line 37, seller.list.styles.scss */
+/* line 38, seller.list.styles.scss */
 .sellers-list-container p img {
   height: 25px;
 }
-/* line 41, seller.list.styles.scss */
+/* line 42, seller.list.styles.scss */
 .sellers-list-container seller-thumbnail {
   width: 100%;
 }
-/* line 44, seller.list.styles.scss */
+/* line 45, seller.list.styles.scss */
 .sellers-list-container ngb-pagination {
   margin-top: 35px;
 }
 
 @media screen and (max-width: 425px) {
-  /* line 50, seller.list.styles.scss */
+  /* line 51, seller.list.styles.scss */
   .sellers-list-container {
     width: 95%;
   }

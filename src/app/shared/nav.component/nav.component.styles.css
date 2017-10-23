@@ -156,7 +156,7 @@
 }
 /* line 151, nav.component.styles.scss */
 .nav .search-and-nav-container .search-form-container {
-  height: 60px;
+  height: 100px;
   width: 70%;
   margin: 0 auto;
   display: flex;
@@ -181,15 +181,11 @@
 .nav .search-and-nav-container .search-form-container .small-nav-and-logo-container .logo img {
   width: 100%;
 }
-/* line 174, nav.component.styles.scss */
-.nav .search-and-nav-container .search-form-container div:last-child {
-  width: 75%;
-}
-/* line 178, nav.component.styles.scss */
+/* line 175, nav.component.styles.scss */
 .nav .search-and-nav-container header {
   background-color: lightgrey;
 }
-/* line 180, nav.component.styles.scss */
+/* line 177, nav.component.styles.scss */
 .nav .search-and-nav-container header .nav-container {
   padding: 0;
   display: flex;
@@ -200,7 +196,7 @@
   align-content: center;
   align-items: center;
 }
-/* line 189, nav.component.styles.scss */
+/* line 186, nav.component.styles.scss */
 .nav .search-and-nav-container header .nav-container .menu-item {
   cursor: pointer;
   transition: 0.25s all;
@@ -209,34 +205,34 @@
   align-items: center;
   box-sizing: border-box;
 }
-/* line 197, nav.component.styles.scss */
+/* line 194, nav.component.styles.scss */
 .nav .search-and-nav-container header .nav-container .menu-item:focus {
   outline: none;
 }
-/* line 200, nav.component.styles.scss */
+/* line 197, nav.component.styles.scss */
 .nav .search-and-nav-container header .nav-container .menu-item .icon {
   width: 35px;
   height: 35px;
 }
-/* line 204, nav.component.styles.scss */
+/* line 201, nav.component.styles.scss */
 .nav .search-and-nav-container header .nav-container .menu-item .icon svg {
   width: 80%;
 }
-/* line 208, nav.component.styles.scss */
+/* line 205, nav.component.styles.scss */
 .nav .search-and-nav-container header .nav-container .menu-item a {
   margin-left: 5px;
   color: #31004a;
   align-self: flex-end;
   padding-bottom: 2px;
 }
-/* line 216, nav.component.styles.scss */
+/* line 213, nav.component.styles.scss */
 .nav .search-and-nav-container header .nav-container .active {
   transition: 0.25s all;
   padding-bottom: 3px;
   border-bottom: 2px solid #31004a;
 }
 
-/* line 226, nav.component.styles.scss */
+/* line 223, nav.component.styles.scss */
 .fixed {
   position: fixed;
   z-index: 91;
@@ -244,39 +240,39 @@
   box-shadow: 0 0 50px 0 black;
 }
 
-/* line 233, nav.component.styles.scss */
+/* line 230, nav.component.styles.scss */
 .relative {
   position: relative;
 }
 
-/* line 237, nav.component.styles.scss */
+/* line 234, nav.component.styles.scss */
 .search-and-nav-container-placeholder {
   background-color: #eee;
-  height: 120px;
+  height: 160px;
 }
 
 /*******************/
 /*Responsive styles*/
 /*******************/
 @media screen and (max-width: 1100px) {
-  /* line 247, nav.component.styles.scss */
+  /* line 244, nav.component.styles.scss */
   .menu-overlay-background {
     display: block;
   }
 
-  /* line 250, nav.component.styles.scss */
+  /* line 247, nav.component.styles.scss */
   .translate-menu-close {
     transform: translate(-200px);
     transition: 0.25s all;
   }
 
-  /* line 254, nav.component.styles.scss */
+  /* line 251, nav.component.styles.scss */
   .translate-menu-open {
     transform: translate(0);
     transition: 0.25s all;
   }
 
-  /* line 258, nav.component.styles.scss */
+  /* line 255, nav.component.styles.scss */
   .small-width-nav-container {
     position: fixed;
     z-index: 102;
@@ -285,7 +281,7 @@
     background-color: #fff;
     height: 100%;
   }
-  /* line 265, nav.component.styles.scss */
+  /* line 262, nav.component.styles.scss */
   .small-width-nav-container .menu-item {
     display: flex;
     cursor: pointer;
@@ -297,37 +293,37 @@
     width: 200px;
     height: 40px;
   }
-  /* line 275, nav.component.styles.scss */
+  /* line 272, nav.component.styles.scss */
   .small-width-nav-container .menu-item:focus {
     outline: none;
   }
-  /* line 279, nav.component.styles.scss */
+  /* line 276, nav.component.styles.scss */
   .small-width-nav-container .menu-item .icon {
     width: 25px;
   }
-  /* line 283, nav.component.styles.scss */
+  /* line 280, nav.component.styles.scss */
   .small-width-nav-container .menu-item a {
     color: #31004a;
     margin-left: 10px;
   }
-  /* line 288, nav.component.styles.scss */
+  /* line 285, nav.component.styles.scss */
   .small-width-nav-container .active {
     padding-top: 5px;
     background-color: #31004a;
   }
-  /* line 293, nav.component.styles.scss */
+  /* line 290, nav.component.styles.scss */
   .small-width-nav-container .active .icon .menu-icon {
     fill: #75FF75;
   }
-  /* line 297, nav.component.styles.scss */
+  /* line 294, nav.component.styles.scss */
   .small-width-nav-container .active a {
     color: #75FF75;
   }
-  /* line 299, nav.component.styles.scss */
+  /* line 296, nav.component.styles.scss */
   .small-width-nav-container .active a:hover {
     color: #75FF75;
   }
-  /* line 304, nav.component.styles.scss */
+  /* line 301, nav.component.styles.scss */
   .small-width-nav-container .close {
     margin-bottom: 25px;
     margin-top: 10px;
@@ -335,50 +331,54 @@
     align-self: flex-end;
     width: 50px;
   }
-  /* line 310, nav.component.styles.scss */
+  /* line 307, nav.component.styles.scss */
   .small-width-nav-container .close svg {
     width: 35px;
   }
-  /* line 312, nav.component.styles.scss */
+  /* line 309, nav.component.styles.scss */
   .small-width-nav-container .close svg .a {
     fill: #31004a;
   }
 
-  /* line 319, nav.component.styles.scss */
+  /* line 316, nav.component.styles.scss */
   .nav .search-and-nav-container {
     border-bottom: 1px solid lightgrey;
   }
-  /* line 323, nav.component.styles.scss */
+  /* line 318, nav.component.styles.scss */
+  .nav .search-and-nav-container .search-form-container {
+    height: 60px;
+  }
+  /* line 321, nav.component.styles.scss */
   .nav .search-and-nav-container .search-form-container .small-nav-and-logo-container .small-width-nav-button {
     display: block;
   }
-  /* line 328, nav.component.styles.scss */
+  /* line 326, nav.component.styles.scss */
   .nav .search-and-nav-container header {
     display: none;
   }
-  /* line 332, nav.component.styles.scss */
+  /* line 330, nav.component.styles.scss */
   .nav .search-and-nav-container-placeholder {
     height: 60px;
   }
 }
 @media screen and (max-width: 725px) {
-  /* line 342, nav.component.styles.scss */
+  /* line 340, nav.component.styles.scss */
   .nav .above-header-container .above-header-for-width .to-be-hide {
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 353, nav.component.styles.scss */
+  /* line 351, nav.component.styles.scss */
   .nav .above-header-container .above-header-for-width {
     width: 95%;
   }
-  /* line 358, nav.component.styles.scss */
+  /* line 356, nav.component.styles.scss */
   .nav .search-and-nav-container .search-form-container {
     width: 95%;
   }
 }
 @media screen and (max-width: 450px) {
-  /* line 370, nav.component.styles.scss */
+  /* line 368, nav.component.styles.scss */
   .nav .above-header-container .above-header-for-width .favourite-container p {
     display: none;
   }

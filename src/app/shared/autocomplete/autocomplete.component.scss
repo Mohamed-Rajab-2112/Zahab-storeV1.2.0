@@ -1,0 +1,92 @@
+@import "../../../assets/stylesheets/colors-theme.scss";
+
+.autoComplete-container {
+  position: relative;
+  //width: 100%;
+  margin: 0;
+  //border: 1px solid black;
+  input {
+    position: relative;
+    z-index: 92;
+    //width: 100%;
+  }
+  ul {
+    position: absolute;
+    //top: 15px;
+    top: 40px;
+    width: 100%;
+    //border: 3px solid black;
+    box-sizing: border-box;
+    padding: 5px 25px 5px 5px;
+    z-index: 92;
+    background-color: white;
+    //padding-left: 0;
+    //padding-right: 0;
+    .item {
+      cursor: pointer;
+    }
+    li {
+      font-family: sans-serif;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: white;
+      list-style: none;
+      font-size: 0.9em;
+      //width: 100%;
+      margin-left: 0;
+      padding-right: 10px;
+      box-sizing: border-box;
+      border-bottom: 1px solid $borderColor;
+      &:hover {
+      background-color: $grey;
+      }
+    }
+  }
+}
+
+.backdrop-hidden {
+  display: none;
+}
+
+.backdrop-shown {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 91;
+}
+
+@media screen and (max-width: 1024px) {
+  ul {
+    width: 60.5%;
+    top: 135px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ul {
+    width: 57.5%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  ul {
+    width: 68%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  ul {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  ul {
+    width: 86.5%;
+    top: 143px;
+  }
+}

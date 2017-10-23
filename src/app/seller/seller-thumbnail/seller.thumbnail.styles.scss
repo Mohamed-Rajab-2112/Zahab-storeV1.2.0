@@ -3,6 +3,7 @@
 md-card {
   cursor: pointer;
   margin: 5px 0;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +37,7 @@ md-card {
     justify-content: space-between;
     align-items: center;
     img {
-      width: 150px;
+      width: 125px;
     }
     .products-count-container {
       //width: 60%;

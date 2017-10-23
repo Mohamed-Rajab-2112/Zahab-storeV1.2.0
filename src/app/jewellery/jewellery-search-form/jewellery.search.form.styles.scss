@@ -1,4 +1,4 @@
-@import "../../assets/stylesheets/colors-theme.scss";
+@import "../../../assets/stylesheets/colors-theme.scss";
 
 .small-width-search-btn {
   display: none;
@@ -10,33 +10,35 @@
 
 form {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   align-items: center;
   //border: 1px solid black;
-  md-input-container {
+  app-autocomplete {
+    width: 100%;
+    margin-bottom: 8px;
     //border: 1px solid black;
-    .mat-input-element {
-      width: auto;
-    }
-    font-size: 1.5em;
   }
-  input {
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 1em;
+  .search-terms {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     //border: 1px solid black;
-    color: $darkBlue;
-    &:focus {
-      outline: none;
+    .types-container {
+      display: flex;
+      flex-direction: row;
+      //border: 1px solid black;
+      width: 100%;
+      margin-right: 0;
+      .single-type {
+        margin-left: 15px;
+        label {
+          span {
+            text-transform: capitalize;
+          }
+        }
+      }
     }
-  }
-  label {
-    //border: 1px solid black;
-    margin-left: 30px;
-    margin-right: 30px;
-    color: $dcolor;
-    font-size: 1.5em;
   }
   button {
     width: 100px;
@@ -90,6 +92,10 @@ form {
     top: 90px;
     background-color: $bgcolor;
     width: $appWidth;
+    height: 80px;
+    app-autocomplete {
+      margin-left: 5px;
+    }
   }
   .hidden-form {
     display: none;
@@ -115,31 +121,48 @@ form {
     .btn:focus {
       outline: none;
     }
-    //}
   }
 }
 
 @media screen and (max-width: 768px) {
   .arrow-icon {
-    right: 20%  ;
+    right: 20%;
   }
   form {
-    flex-direction: column;
+    .search-terms {
+      .types-container {
+        flex-wrap: wrap;
+        .single-type {
+          width: 35%;
+          label {
+            width: 110px;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 425px) {
   .arrow-icon {
-    right: 10%  ;
+    right: 10%;
   }
   form {
     left: 5%;
     width: 90%;
+    .search-terms {
+      .types-container {
+        width: 100%;
+        .single-type {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 320px) {
   .arrow-icon {
-    right: 15%  ;
+    right: 15%;
   }
 }

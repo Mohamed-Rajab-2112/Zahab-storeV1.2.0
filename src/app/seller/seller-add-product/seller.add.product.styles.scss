@@ -1,9 +1,10 @@
-@import "../../assets/stylesheets/colors-theme.scss";
+@import "../../../assets/stylesheets/colors-theme.scss";
 
 form {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 25px auto 0;
+  width: 80%;
   height: 100%;
   .form-field-container {
     margin-bottom: 25px;
@@ -12,10 +13,12 @@ form {
       width: 100%;
     }
   }
-  button {
-    @include button-default;
-    &:hover {
-      @include button-focused;
+  .d-inline-block {
+    &>button {
+      @include button-default;
+      &:hover {
+        @include button-focused;
+      }
     }
   }
   .upload-btn {
@@ -41,6 +44,10 @@ form {
     margin-top: 35px;
     padding-bottom: 25px;
     //border: 1px solid black;
+    //.close-btn {
+    //  background-color: rgba(0, 0, 0, 0);
+    //  cursor: pointer;
+    //}
   }
 }
 

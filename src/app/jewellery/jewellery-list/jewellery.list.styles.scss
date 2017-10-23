@@ -1,12 +1,18 @@
-@import "../../assets/stylesheets/colors-theme.scss";
+@import "../../../assets/stylesheets/colors-theme.scss";
 
 jewellery-full-option {
   width: $appWidth;
 }
 
-@media screen and (max-width: 425px) {
+//@media screen and (max-width: 425px) {
+//  jewellery-full-option {
+//    width: $appWidth;
+//  }
+//}
+
+@media screen and (max-width: 768px) {
   jewellery-full-option {
-    margin-top: 50px;
+    //margin-top: 25px;
     width: $smallScreenWidth;
   }
 }

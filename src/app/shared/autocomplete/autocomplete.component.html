@@ -1,0 +1,16 @@
+<div
+  (click)="toggleAutoComplete()" [ngClass]="backdropToggleClass">
+</div>
+
+<div class="autoComplete-container">
+
+  <input type="text" name="text" [ngModel]="text" class="form-control" (ngModelChange)="autoComplete($event)" dir="rtl"
+         id="autoCompleteInput"
+         (focus)="toggleAutoComplete()" placeholder="المنطقه (مدينة نصر, مصر الجديده ...)">
+
+  <ul *ngIf="toggleAutoCompleetList && text.length >= 2" dir="rtl">
+    <li *ngFor="let item of filteredItems" (click)="selectItem(item)" class="item" dir="rtl">{{item}}</li>
+    <li *ngIf="filteredItems.length==0 && text.length >= 2">This {{itemType}} not found</li>
+  </ul>
+
+</div>

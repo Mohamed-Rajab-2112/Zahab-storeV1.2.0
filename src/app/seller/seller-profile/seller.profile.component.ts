@@ -1,6 +1,7 @@
 import {Component, OnInit, OnDestroy} from "@angular/core";
-import {MdDialog} from '@angular/material';
+// import {MdDialog} from '@angular/material';
 import {SellerAddComponent} from '../seller-add-product/seller.add.product.component'
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 import {
@@ -24,7 +25,7 @@ export class SellerProfileComponent implements OnInit, OnDestroy {
   userSubscription: any;
   editDialogSubscription: any;
 
-  constructor(private seller: SellerService, private jewellery: JewelleryService, private auth: AuthService, private dialog: MdDialog) {
+  constructor(private seller: SellerService, private jewellery: JewelleryService, private auth: AuthService, private modalService: NgbModal) {
   }
 
   ngOnInit() {
@@ -47,13 +48,17 @@ export class SellerProfileComponent implements OnInit, OnDestroy {
   }
 
   openDialog(data: any) {
-    let dialogRef = this.dialog.open(SellerAddComponent, {
-        data: data,
-        width: '500px',
-        height: 'auto',
-        disableClose: true
-      }
-    );
+    // let dialogRef = this.dialog.open(SellerAddComponent, {
+    //     data: data,
+    //     width: '500px',
+    //     height: 'auto',
+    //     disableClose: true
+    //   }
+    // );
+    let dialogRef = this.modalService.open(SellerAddComponent, {
+      keyboard: true
+    });
+    dialogRef.componentInstance.product = data;
   }
 }
 

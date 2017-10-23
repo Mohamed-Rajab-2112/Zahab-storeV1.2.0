@@ -1,4 +1,14 @@
-<h3 *ngIf="userType === 'Vendor'">Welcome, Signup as a Vendor</h3>
+<div class="modal-header">
+  <h4 class="modal-title">Welcome, Signup...</h4>
+  <button type="button" class="close" aria-label="Close" *ngIf="userType === 'Customer'" (click)="toggleSignInFlag()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <button type="button" class="close" aria-label="Close" *ngIf="userType === 'Vendor``'" (click)="closeInDialogCase()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!--<h3 *ngIf="userType === 'Vendor'">Welcome, Signup as a Vendor</h3>-->
+
 <form name="signUpForm" [formGroup]="signupForm" autocomplete="off"
       (ngSubmit)="signupForm.valid && signupForm.value.password === signupForm.value.password2 && signUp(signupForm.value)"
       novalidate>
@@ -13,20 +23,13 @@
     <md-error>this field required</md-error>
   </md-input-container>
 
-  <!--/******************Fields for vendor sign up only*******************/-->
+  <!--/****************** Fields for vendor sign up only *******************/-->
   <div *ngIf="userType === 'Vendor'">
-    <md-input-container>
-      <input type="text" mdInput formControlName="area" name="area" placeholder="Area..." [mdAutocomplete]="auto"
-             [formControl]="area" required>
-      <md-error>this field required</md-error>
-    </md-input-container>
 
-    <md-autocomplete #auto="mdAutocomplete">
-      <md-option *ngFor="let area of filteredAreas | async" [value]="area">
-        {{area}}
-      </md-option>
-      <md-option *ngIf="showNoAreaFound" [disabled]="true"><em>(This area not exist)</em></md-option>
-    </md-autocomplete>
+    <label>Area</label>
+    <app-autocomplete [items]="areas" [itemType]="'area'" (selectedItem)="selectedArea($event)"></app-autocomplete>
+
+    <md-error *ngIf="area == ''">Select valid area</md-error>
 
     <md-input-container>
       <input type="number" mdInput formControlName="phoneNumber" name="phoneNumber" placeholder="Phone Number..."
@@ -56,10 +59,13 @@
   </div>
 
   <div class="buttons-container">
-    <button type="button" (click)="toggleSignInFlag()" md-button *ngIf="userType === 'Customer'">Close</button>
-    <button type="button" (click)="closeInDialogCase()" md-button *ngIf="userType === 'Vendor'">Close</button>
-    <button type="submit" md-mini-fab style="width: 55px; height: 55px">
-      <md-icon svgIcon="check" style="width: 55%; height: 55%; "></md-icon>
+    <button type="button" (click)="toggleSignInFlag()" *ngIf="userType === 'Customer'"
+            class="btn btn-default close-btn">Close
+    </button>
+    <button type="button" (click)="closeInDialogCase()" *ngIf="userType === 'Vendor'"
+            class="btn btn-default close-btn">Close
+    </button>
+    <button type="submit" class="btn btn-primary submit">Submit
     </button>
   </div>
 

@@ -38,6 +38,20 @@ export class SellerProductsFilter implements OnInit, OnChanges {
     }
   }
 
+  setGoldDegree(goldDegree) {
+    if (this.selectedDegree !== goldDegree) {
+      this.selectedDegree = goldDegree;
+      this.filterByTerms();
+    }
+  }
+
+  setPriceSort(priceSort) {
+    if (priceSort !== this.priceSort) {
+      this.priceSort = priceSort;
+      this.filterByTerms();
+    }
+  }
+
   filterByTerms() {
     let terms: any = {
       type: this.type || 'All',

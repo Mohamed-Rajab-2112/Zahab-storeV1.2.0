@@ -1,10 +1,11 @@
-import {Component, OnInit, Output, EventEmitter, Inject} from "@angular/core";
+import {Component, OnInit, Output, Input, EventEmitter, Inject} from "@angular/core";
 
 import {JewelleryService} from "../../shared/index";
 import {SellerService} from "../../shared/services/seller.service";
 // import {JeweleryProduct} from "../../shared/models/jewelleryProduct.model";
 import {DomSanitizer} from "@angular/platform-browser";
-import {MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
+// import {MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
+import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 // const numberOfImagesToUpload = 3;
 
@@ -16,6 +17,7 @@ import {MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
 
 export class SellerAddComponent implements OnInit {
   @Output() newPrice = new EventEmitter();
+  @Input() product;
   productTypes: string[];
   goldDegrees: string[];
   imageUrlValid: boolean;
@@ -24,21 +26,21 @@ export class SellerAddComponent implements OnInit {
   productOldValue: any;
   oldPrice: number;
 
-  constructor(private jewellery: JewelleryService, private seller: SellerService, private sanitizer: DomSanitizer, public dialogRef: MdDialogRef<SellerAddComponent>, @Inject(MD_DIALOG_DATA) public product: any) {
+  constructor(private jewellery: JewelleryService, private seller: SellerService, private sanitizer: DomSanitizer, public dialogRef: NgbActiveModal) {
   }
 
   ngOnInit() {
-    console.log(this.product);
+    // console.log(this.product);
     this.productTypes = this.jewellery.getProductTypes();
     this.goldDegrees = this.jewellery.getGoldDegree();
-    console.log(this.productTypes);
-    console.log(this.goldDegrees);
+    // console.log(this.productTypes);
+    // console.log(this.goldDegrees);
     this.oldPrice = this.product.price || '';
     this.productOldValue = JSON.stringify(this.product);
-    console.log(this.productOldValue);
+    // console.log(this.productOldValue);
     this.product = JSON.parse(this.productOldValue);
-    console.log(this.product);
-
+    // console.log(this.product);
+    // console.log(this.product.type);
     this.imageUrlValid = false;
     if (this.product.imageUrl) {
       this.imagesFilesList = this.product.imageUrl;
@@ -47,6 +49,14 @@ export class SellerAddComponent implements OnInit {
 
     // this.product.type = this.product.type || '-Choose Product Type-';
     // this.product.goldDegree = this.product.goldDegree;
+  }
+
+  setType(type) {
+    this.product.type = type;
+  }
+
+  setGoldDegree(goldDegree) {
+    this.product.goldDegree = goldDegree;
   }
 
   deleteImage(image: any) {
@@ -61,12 +71,18 @@ export class SellerAddComponent implements OnInit {
     productDetails.imageUrl = this.imagesFilesList;
     this.product.id && (productDetails.id = this.product.id);
     this.imageUrlValid = !!productDetails.imageUrl.length;
+    productDetails.goldDegree = this.product.goldDegree;
+    productDetails.type = this.product.type;
     if (this.imageUrlValid) {
       productDetails.id = productDetails.id || this.seller.sellerDetails.id + Date.now();
       this.seller.postNewProduct(productDetails);
-      this.dialogRef.close();
+      this.closeDialog();
     }
     console.log(productDetails);
+  }
+
+  closeDialog() {
+    this.dialogRef.close();
   }
 
   getImageUrl(value: any) {

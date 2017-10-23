@@ -1,9 +1,9 @@
-@import "../../assets/stylesheets/colors-theme";
+@import "../../../assets/stylesheets/colors-theme";
 
 .log-in-sign-up {
   overflow: hidden;
   width: 300px;
-  margin: 200px auto 0;
+  margin: 150px auto 0;
   //border: 1px solid black;
   position: relative;
   z-index: 101;
@@ -50,6 +50,9 @@
       background-color: #fff;
       padding: 25px;
       border-radius: 3px;
+      .input-group-addon {
+        width: 90px;
+      }
       .vendors-note {
         text-align: center;
         md-icon {
@@ -72,9 +75,14 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-        button:last-child {
-          background-color: $ldcolor;
-        }
+        //.close-btn {
+        //  background-color: rgba(0, 0, 0, 0);
+        //  cursor: pointer;
+        //}
+        //button:last-child {
+        //  background-color: $ldcolor;
+        //  cursor: pointer;
+        //}
       }
       .match-msg {
         display: flex;

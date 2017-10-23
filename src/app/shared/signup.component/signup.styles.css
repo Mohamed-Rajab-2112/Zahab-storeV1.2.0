@@ -33,29 +33,30 @@ form .customer-vendor-buttons-container {
 /* line 31, signup.styles.scss */
 form .buttons-container {
   width: 100%;
+  margin-top: 25px;
   display: flex;
   justify-content: space-around;
 }
-/* line 35, signup.styles.scss */
+/* line 36, signup.styles.scss */
 form .buttons-container button:last-child {
   background-color: #586D8C;
 }
-/* line 39, signup.styles.scss */
+/* line 40, signup.styles.scss */
 form .match-msg {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
-/* line 44, signup.styles.scss */
+/* line 45, signup.styles.scss */
 form .match-msg em {
   font-size: 0.9em;
   font-weight: bold;
 }
-/* line 48, signup.styles.scss */
+/* line 49, signup.styles.scss */
 form .match-msg .matched {
   color: #31004a;
 }
-/* line 51, signup.styles.scss */
+/* line 52, signup.styles.scss */
 form .match-msg .not-matched {
   color: red;
 }

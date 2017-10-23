@@ -1,19 +1,20 @@
 <div class="sellers-list-container">
 
-  <form [formGroup]="filterSellersForm">
+  <form [formGroup]="filterSellersForm" autocomplete="off">
 
     <div class="field">
-      <md-input-container>
-        <input mdInput placeholder="Filter vendors by area" [mdAutocomplete]="auto" formControlName="stateCtrl">
-      </md-input-container>
+      <!--<md-input-container>-->
+      <!--<input mdInput placeholder="Filter vendors by area" [mdAutocomplete]="auto" formControlName="stateCtrl">-->
+      <!--</md-input-container>-->
 
-      <md-autocomplete #auto="mdAutocomplete">
-        <md-option *ngFor="let area of filteredAreas | async" [value]="area" (click)="filterSellers(area)">
-          {{ area }}
-        </md-option>
-      </md-autocomplete>
+      <!--<md-autocomplete #auto="mdAutocomplete">-->
+      <!--<md-option *ngFor="let area of filteredAreas | async" [value]="area" (click)="filterSellers(area)">-->
+      <!--{{ area }}-->
+      <!--</md-option>-->
+      <!--</md-autocomplete>-->
+
+      <app-autocomplete [items]="areas" [itemType]="'area'" (selectedItem)="filterSellers($event)"></app-autocomplete>
     </div>
-
   </form>
 
   <div class="alert alert-warning warning" role="alert" *ngIf="showVerifiedVendorAlert">

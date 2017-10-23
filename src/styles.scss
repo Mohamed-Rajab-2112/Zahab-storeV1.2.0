@@ -1,20 +1,24 @@
 ///* You can add global styles to this file, and also import other style files */
 //
-//html body h1 {
-//  margin-top: 0;
-//  color: #369;
-//  font-family: Arial, Helvetica, sans-serif;
-//  font-size: 250%;
-//}
-//
-//html {
-//  background-color: #DFDFDF;
-//}
-//
-//html body {
-//  background-color: #F8C8C6;
-//  width: 80%;
-//  margin: 75px auto 0;
-//  border-top-right-radius: 20px;
-//  border-top-left-radius : 20px;
-//}
+
+@import "assets/stylesheets/colors-theme";
+
+
+.form-validation-alert {
+  margin-top: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px
+  //height: 50px !important;
+}
+
+.submit {
+  background-color: $ldcolor;
+  cursor: pointer;
+}
+
+.close-btn {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+

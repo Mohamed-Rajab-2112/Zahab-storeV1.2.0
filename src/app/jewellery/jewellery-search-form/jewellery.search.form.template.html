@@ -1,5 +1,4 @@
 <div class="small-screen-search-backdrop" [hidden]="toggleBackdrop" (click)="toggleSearchForm()">
-
 </div>
 
 <button class="small-width-search-btn" (click)="toggleSearchForm()">
@@ -8,44 +7,45 @@
 
 <md-icon svgIcon="arrow" class="arrow-icon" [hidden]="toggleBackdrop"></md-icon>
 
-<form #searchProductAndPlaceForm="ngForm" autocomplete="off"
-      (ngSubmit)="searchProductAndarea(searchProductAndPlaceForm.value)"
-      class="serching-form" novalidate [formGroup]="searchForm" [ngClass]="toggleSearchFormClass">
+<form #searchProduct="ngForm" autocomplete="off"
+      (ngSubmit)="searchProduct.valid && searchProductAndarea(searchProduct.value)"
+      class="serching-form" novalidate [ngClass]="toggleSearchFormClass">
 
-  <label>Find</label>
+  <div class="search-terms">
+    <app-autocomplete [items]="areas" [itemType]="'area'" (selectedItem)="getSelectedArea($event)"></app-autocomplete>
+    <!--<md-error *ngIf="area == ''">Select valid area</md-error>-->
+    <div class="types-container" dir="rtl">
+      <div *ngFor="let type of types" class="single-type">
+        <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+          <input type="checkbox" class="custom-control-input" (click)="toggleTypeSearch(type)"
+                 [checked]="!!selectedTypes.includes(type)">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">{{type}}</span>
+        </label>
+      </div>
 
-  <md-input-container floatPlaceholder="never">
-    <input mdInput name="productName" type="text" placeholder="ring, necklace, etc ..."
-           [mdAutocomplete]="productNameAuto"
-           formControlName="productName">
-  </md-input-container>
+      <div class="single-type">
+        <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+          <input type="checkbox" class="custom-control-input" (click)="toggleTypeSearch(defaultSelectedType)"
+                 [checked]="!!selectedTypes.includes(defaultSelectedType) || !selectedTypes.length" [disabled]="!!selectedTypes.includes(defaultSelectedType)">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">All Jewellery</span>
+        </label>
+      </div>
 
-  <md-autocomplete #productNameAuto="mdAutocomplete">
-    <md-option *ngFor="let type of filteredTypes | async" [value]="type">
-      {{type}}
-    </md-option>
-  </md-autocomplete>
+    </div>
 
-  <label>at</label>
+  </div>
 
-  <md-input-container floatPlaceholder="never">
-    <input mdInput name="area" type="text" dir="rtl" placeholder="مصر الجديده, مدينة نصر, ..."
-           [mdAutocomplete]="areaAuto"
-           formControlName="area">
-  </md-input-container>
-
-  <md-autocomplete #areaAuto="mdAutocomplete">
-    <md-option *ngFor="let type of filteredAreas | async" [value]="type">
-      {{type}}
-    </md-option>
-  </md-autocomplete>
-
-  <button
-    [disabled]="searchForm.controls.productName?.errors?.required && !sellerName && searchForm.controls.area?.errors?.required"
-    type="submit"
-    class="btn">
+  <button type="submit" class="btn" [disabled]="!area">
     <img src="assets/images/search-icon.svg">
   </button>
 
-</form>
+  <!--<button-->
+  <!--[disabled]="searchProduct.controls?.area?.errors?.required"-->
+  <!--type="submit"-->
+  <!--class="btn">-->
+  <!--<img src="assets/images/search-icon.svg">-->
+  <!--</button>-->
 
+</form>

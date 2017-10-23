@@ -16,6 +16,7 @@ export class SellerProfileEditComponent implements OnInit, OnDestroy {
   showVerificationAlert: boolean;
   verificationAlertStateSubscription: any;
   areas: string[];
+  area: string;
   filteredAreas: any;
   addressForm: FormGroup;
   areaControl: FormControl;
@@ -36,9 +37,9 @@ export class SellerProfileEditComponent implements OnInit, OnDestroy {
     this.areas = this.jewellery.getAreas();
     this.areaControl = new FormControl(this.user.area);
     this.addressControl = new FormControl(this.user.address);
-    this.filteredAreas = this.areaControl.valueChanges.startWith(null).map((val: string) => val ? this.filter(val, this.areas) : this.areas.slice());
+    // this.filteredAreas = this.areaControl.valueChanges.startWith(null).map((val: string) => val ? this.filter(val, this.areas) : this.areas.slice());
     this.addressForm = new FormGroup({
-      area: this.areaControl,
+      // area: this.areaControl,
       address: this.addressControl
     })
   }
@@ -47,10 +48,13 @@ export class SellerProfileEditComponent implements OnInit, OnDestroy {
     this.verificationAlertStateSubscription.unsubscribe();
   }
 
-  filter(val: string, data: string[]): string[] {
-    return data.filter((type) => new RegExp(`^${val}`, 'gi').test(type));
+  selectedArea(area) {
+    this.area = area;
   }
 
+  // filter(val: string, data: string[]): string[] {
+  //   return data.filter((type) => new RegExp(`^${val}`, 'gi').test(type));
+  // }
 
   updateProfile(newProfileDetails: any) {
     if (this.logoDetails.name) {
