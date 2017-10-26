@@ -92,7 +92,9 @@ form {
     top: 90px;
     background-color: $bgcolor;
     width: $appWidth;
-    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    //min-height: 80px;
     app-autocomplete {
       margin-left: 5px;
     }

@@ -97,24 +97,25 @@ form button .btn:focus {
     top: 90px;
     background-color: #fff;
     width: 70%;
-    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  /* line 96, jewellery.search.form.styles.scss */
+  /* line 98, jewellery.search.form.styles.scss */
   form app-autocomplete {
     margin-left: 5px;
   }
 
-  /* line 100, jewellery.search.form.styles.scss */
+  /* line 102, jewellery.search.form.styles.scss */
   .hidden-form {
     display: none;
   }
 
-  /* line 103, jewellery.search.form.styles.scss */
+  /* line 105, jewellery.search.form.styles.scss */
   .shown-form {
     display: flex;
   }
 
-  /* line 109, jewellery.search.form.styles.scss */
+  /* line 111, jewellery.search.form.styles.scss */
   .small-width-search-btn {
     float: right;
     margin-right: 0;
@@ -124,56 +125,56 @@ form button .btn:focus {
     border: none;
     cursor: pointer;
   }
-  /* line 118, jewellery.search.form.styles.scss */
+  /* line 120, jewellery.search.form.styles.scss */
   .small-width-search-btn img {
     width: 35px;
   }
-  /* line 121, jewellery.search.form.styles.scss */
+  /* line 123, jewellery.search.form.styles.scss */
   .small-width-search-btn .btn:focus {
     outline: none;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 128, jewellery.search.form.styles.scss */
+  /* line 130, jewellery.search.form.styles.scss */
   .arrow-icon {
     right: 20%;
   }
 
-  /* line 133, jewellery.search.form.styles.scss */
+  /* line 135, jewellery.search.form.styles.scss */
   form .search-terms .types-container {
     flex-wrap: wrap;
   }
-  /* line 135, jewellery.search.form.styles.scss */
+  /* line 137, jewellery.search.form.styles.scss */
   form .search-terms .types-container .single-type {
     width: 35%;
   }
-  /* line 137, jewellery.search.form.styles.scss */
+  /* line 139, jewellery.search.form.styles.scss */
   form .search-terms .types-container .single-type label {
     width: 110px;
   }
 }
 @media screen and (max-width: 425px) {
-  /* line 147, jewellery.search.form.styles.scss */
+  /* line 149, jewellery.search.form.styles.scss */
   .arrow-icon {
     right: 10%;
   }
 
-  /* line 150, jewellery.search.form.styles.scss */
+  /* line 152, jewellery.search.form.styles.scss */
   form {
     left: 5%;
     width: 90%;
   }
-  /* line 154, jewellery.search.form.styles.scss */
+  /* line 156, jewellery.search.form.styles.scss */
   form .search-terms .types-container {
     width: 100%;
   }
-  /* line 156, jewellery.search.form.styles.scss */
+  /* line 158, jewellery.search.form.styles.scss */
   form .search-terms .types-container .single-type {
     width: 100%;
   }
 }
 @media screen and (max-width: 320px) {
-  /* line 165, jewellery.search.form.styles.scss */
+  /* line 167, jewellery.search.form.styles.scss */
   .arrow-icon {
     right: 15%;
   }
