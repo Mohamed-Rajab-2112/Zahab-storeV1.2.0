@@ -38,3 +38,9 @@
     margin-top: 25px;
   }
 }
+@media screen and (max-width: 425px) {
+  /* line 49, jewellery.full.option.styles.scss */
+  .jewellery-full-option-container .products-listing-container jewellery-thumbnail {
+    width: 100%;
+  }
+}

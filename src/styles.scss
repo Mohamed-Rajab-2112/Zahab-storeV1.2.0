@@ -1,8 +1,6 @@
 ///* You can add global styles to this file, and also import other style files */
 //
-
 @import "assets/stylesheets/colors-theme";
-
 
 .form-validation-alert {
   margin-top: 5px;
@@ -21,4 +19,6 @@
   cursor: pointer;
 }
 
-
+.nav-auto-complete {
+  //z-index: 50;
+}

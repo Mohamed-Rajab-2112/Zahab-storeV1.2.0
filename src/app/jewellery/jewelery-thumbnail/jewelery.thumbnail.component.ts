@@ -5,9 +5,11 @@ import {AuthService} from "../../shared/services/auth.service";
 import {JewelleryService} from "../../shared/services/jewellery.service";
 import {CustomerService} from "../../shared/services/customer.service";
 import {SellerService} from "../../shared/services/seller.service";
-import {MdDialog} from '@angular/material';
+// import {MdDialog} from '@angular/material';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
 import {DialogComponent} from '../../shared/DialogComponent/dialog.component';
-import {Observable} from "rxjs";
+// import {Observable} from "rxjs";
 
 @Component({
   selector: "jewellery-thumbnail",
@@ -26,7 +28,7 @@ export class JewelleryThumbnailComponent implements OnInit, OnDestroy {
   dialogRef: any;
   showFavouriteBtn: boolean;
 
-  constructor(private seller: SellerService, private jewellery: JewelleryService, private auth: AuthService, private router: Router, private customer: CustomerService, private dialog: MdDialog) {
+  constructor(private seller: SellerService, private jewellery: JewelleryService, private auth: AuthService, private router: Router, private customer: CustomerService, private dialog: NgbModal) {
 
   }
 
@@ -64,19 +66,15 @@ export class JewelleryThumbnailComponent implements OnInit, OnDestroy {
 
   deleteProduct(product: JeweleryProduct) {
     this.openDialog({title: 'Delete product', body: `Do you want to delete this ${product.type}?`});
-    this.dialogRef.afterClosed().subscribe((result: boolean) => {
+    this.dialogRef.result.then((result: boolean) => {
       console.log(result);
       result && this.jewellery.deleteProduct(product);
     });
   }
 
   openDialog(dialogContent: any) {
-    this.dialogRef = this.dialog.open(DialogComponent, {
-        data: dialogContent,
-        width: '500px',
-        height: 'auto',
-      }
-    );
+    this.dialogRef = this.dialog.open(DialogComponent);
+    this.dialogRef.componentInstance.dialogContent = dialogContent;
   }
 
   showEditForm(product: JeweleryProduct) {

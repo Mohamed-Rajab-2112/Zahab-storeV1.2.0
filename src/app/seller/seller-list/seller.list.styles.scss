@@ -47,6 +47,16 @@
   }
 }
 
+/*******************/
+/*Responsive styles*/
+/*******************/
+
+@media screen and (max-width: 768px) {
+  .sellers-list-container {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .sellers-list-container {
     width: $smallScreenWidth;

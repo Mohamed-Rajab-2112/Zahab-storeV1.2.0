@@ -1,6 +1,7 @@
-import {Component, Inject, OnInit} from "@angular/core";
-import {MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
+import {Component, Inject, OnInit, Input} from "@angular/core";
+// import {MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
 // import {OnInit} from ''
+import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   templateUrl: './dialogTemplate.html',
@@ -8,7 +9,9 @@ import {MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
 })
 
 export class DialogComponent /*implements OnInit*/ {
-  constructor(public dialogRef: MdDialogRef<DialogComponent>, @Inject(MD_DIALOG_DATA) public dialogContent: any) {
+  @Input() dialogContent;
+
+  constructor(public dialogRef: NgbActiveModal) {
   }
 
   // ngOnInit() {

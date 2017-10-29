@@ -27,6 +27,7 @@
             <!--</md-option>-->
             <!--</md-autocomplete>-->
 
+            <label>Area</label>
             <app-autocomplete [items]="areas" [itemType]="'area'"
                               (selectedItem)="selectedArea($event)"></app-autocomplete>
             <md-error *ngIf="area == ''">Select a valid area</md-error>

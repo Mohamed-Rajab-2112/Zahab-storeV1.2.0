@@ -18,8 +18,9 @@
     text-align: center;
     margin: 5px 3px;
     width: 19%;
-    height: 250px;
+    //height: 250px;
     display: flex;
+    padding: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -96,28 +97,20 @@
 /*Responsive styles*/
 /*******************/
 
-@media screen and (max-width: 1024px) {
-  .product-thumbnail-container {
-    .product-thumbnail {
-      min-width: 175px;
-    }
-  }
-}
-
 @media screen and (max-width: 425px) {
   .product-thumbnail-container {
     //border: 1px solid black;
     .product-thumbnail {
-      min-width: 125px;
+      width: 45%;
     }
   }
 }
-
-@media screen and (max-width: 328px) {
-  .product-thumbnail-container {
-    //border: 1px solid black;
-    .product-thumbnail {
-      min-width: 100px;
-    }
-  }
-}
+//
+//@media screen and (max-width: 328px) {
+//  .product-thumbnail-container {
+//    //border: 1px solid black;
+//    .product-thumbnail {
+//      min-width: 100px;
+//    }
+//  }
+//}

@@ -12,7 +12,7 @@
       class="serching-form" novalidate [ngClass]="toggleSearchFormClass">
 
   <div class="search-terms">
-    <app-autocomplete [items]="areas" [itemType]="'area'" (selectedItem)="getSelectedArea($event)"></app-autocomplete>
+    <app-autocomplete [items]="areas" [itemType]="'area'" (selectedItem)="getSelectedArea($event)" class="nav-auto-complete"></app-autocomplete>
     <!--<md-error *ngIf="area == ''">Select valid area</md-error>-->
     <div class="types-container" dir="rtl">
       <div *ngFor="let type of types" class="single-type">

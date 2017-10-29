@@ -86,6 +86,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .jewellery-details {
+    width: $smallScreenWidth;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .jewellery-details {
     width: $smallScreenWidth;

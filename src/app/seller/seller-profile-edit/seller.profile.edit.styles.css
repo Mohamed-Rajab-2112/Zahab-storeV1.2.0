@@ -67,30 +67,30 @@
 .seller-profile-edit-container .alert {
   margin-top: 25px;
 }
-/* line 52, seller.profile.edit.styles.scss */
+/* line 51, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
 }
-/* line 57, seller.profile.edit.styles.scss */
+/* line 56, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user svg {
   width: 25px;
 }
-/* line 59, seller.profile.edit.styles.scss */
+/* line 58, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user svg .a {
   fill: white;
 }
-/* line 62, seller.profile.edit.styles.scss */
+/* line 61, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user svg .b {
   fill: red;
 }
-/* line 66, seller.profile.edit.styles.scss */
+/* line 65, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .note-for-user p {
   margin-bottom: 0;
 }
-/* line 71, seller.profile.edit.styles.scss */
+/* line 70, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .deactivate-tab {
   height: 200px;
   display: flex;
@@ -98,11 +98,19 @@
   justify-content: center;
   align-items: center;
 }
-/* line 78, seller.profile.edit.styles.scss */
+/* line 77, seller.profile.edit.styles.scss */
 .seller-profile-edit-container .deactivate-tab button {
   color: white;
-  width: 300px;
-  height: 50px;
   margin-top: 15px;
   background-color: red;
+}
+
+/*******************/
+/*Responsive styles*/
+/*******************/
+@media screen and (max-width: 1024px) {
+  /* line 92, seller.profile.edit.styles.scss */
+  .seller-profile-edit-container {
+    width: 100%;
+  }
 }

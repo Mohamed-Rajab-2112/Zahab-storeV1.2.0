@@ -23,36 +23,40 @@
   display: flex;
   flex-direction: column;
 }
-/* line 22, customer.profile.styles.scss */
+/* line 21, customer.profile.styles.scss */
+.customer-profile-container .tabs form app-autocomplete {
+  margin-bottom: 25px;
+}
+/* line 25, customer.profile.styles.scss */
 .customer-profile-container .tabs h3 {
-  margin-top: 50px;
+  margin-top: 15px;
   border-bottom: 1px solid #31004a;
   margin-bottom: 15px;
 }
-/* line 28, customer.profile.styles.scss */
+/* line 31, customer.profile.styles.scss */
 .customer-profile-container .delete-container {
   width: 50%;
   margin: 0 auto 45px;
   display: flex;
   flex-direction: column;
 }
-/* line 33, customer.profile.styles.scss */
+/* line 36, customer.profile.styles.scss */
 .customer-profile-container .delete-container button {
   margin-top: 15px;
   background-color: red;
 }
-/* line 38, customer.profile.styles.scss */
+/* line 41, customer.profile.styles.scss */
 .customer-profile-container .note-for-user {
   margin-top: 15px;
   display: flex;
   justify-content: center;
 }
-/* line 42, customer.profile.styles.scss */
+/* line 45, customer.profile.styles.scss */
 .customer-profile-container .note-for-user svg {
   width: 25px;
   height: 25px;
 }
-/* line 47, customer.profile.styles.scss */
+/* line 50, customer.profile.styles.scss */
 .customer-profile-container .submit-button {
   color: #F5D0CA;
   background-color: #31004a;
@@ -63,34 +67,34 @@
 /*Responsive styles*/
 /*******************/
 @media screen and (max-width: 1024px) {
-  /* line 57, customer.profile.styles.scss */
+  /* line 60, customer.profile.styles.scss */
   .customer-profile-container {
     margin-top: 25px;
     border: 1px solid lightgrey;
   }
-  /* line 61, customer.profile.styles.scss */
+  /* line 64, customer.profile.styles.scss */
   .customer-profile-container .tabs form {
     width: 70%;
   }
-  /* line 64, customer.profile.styles.scss */
+  /* line 67, customer.profile.styles.scss */
   .customer-profile-container .tabs .delete-container {
     width: 70%;
   }
 }
 @media screen and (max-width: 425px) {
-  /* line 72, customer.profile.styles.scss */
+  /* line 75, customer.profile.styles.scss */
   .customer-profile-container {
     width: 95%;
   }
-  /* line 74, customer.profile.styles.scss */
+  /* line 77, customer.profile.styles.scss */
   .customer-profile-container .tabs {
     width: 90%;
   }
-  /* line 76, customer.profile.styles.scss */
+  /* line 79, customer.profile.styles.scss */
   .customer-profile-container .tabs form {
     width: 100%;
   }
-  /* line 79, customer.profile.styles.scss */
+  /* line 82, customer.profile.styles.scss */
   .customer-profile-container .tabs .delete-container {
     width: 100%;
   }

@@ -1,5 +1,5 @@
 <div class="product-thumbnail-container" [ngStyle]="applyTranslate()">
-  <md-card *ngFor="let product of products" class="product-thumbnail">
+  <md-card *ngFor="let product of products; let idx = index" class="product-thumbnail">
 
     <div *ngIf="showEditDelBtn" class="button-container">
       <button (click)="editProduct(product)"><img src="assets/images/edit-icon.svg">edit</button>
@@ -16,6 +16,7 @@
       <h3>{{product?.sellerName}}</h3>
       <h3><strong>{{product?.price}} <span>EGP/gm</span></strong></h3>
     </div>
+    <!--<pre>{{idx+1}}</pre>-->
   </md-card>
 
   <div *ngIf="!products?.length" class="alert alert-warning warning empty-store-alert" role="alert">
@@ -24,6 +25,5 @@
       No products available, please come back later!
     </p>
   </div>
-
 </div>
 

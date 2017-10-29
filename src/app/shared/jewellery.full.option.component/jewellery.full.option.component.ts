@@ -32,6 +32,7 @@ export class JewelleryFullOption implements OnInit, OnChanges {
 
   applyPagination(pageNumber: number) {
     this.viewList = this.productsFiltered.slice((pageNumber - 1) * this.pageSize, pageNumber * this.pageSize);
+    window.scrollTo(0, 0);
   }
 
   applyFilterTerms(terms: any) {

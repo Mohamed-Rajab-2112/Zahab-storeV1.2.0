@@ -2,7 +2,7 @@ import {Injectable} from "@angular/core";
 const TEMPSELLERS: User[] = [
   {
     id: 22222,
-    name: 'trtryrtyrty',
+    name: 'seller 1',
     telephone1: 2587413598,
     telephone2: 2015845799,
     userType: 'Vendor',
@@ -14,7 +14,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 33333,
-    name: 'trtryrtyrty',
+    name: 'seller 2',
     telephone1: 2587413598,
     email: 'asdasdasd.asdasd.com',
     userType: 'Vendor',
@@ -24,7 +24,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 11111,
-    name: 'trtryrtyrty',
+    name: 'seller 3',
     telephone1: 2587413598,
     email: 'asdasdasd.asdasd.com',
     address: 'ydffhjkhfsdjfhksdfsdf',
@@ -35,7 +35,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 444,
-    name: 'trtryrtyrty',
+    name: 'seller 4',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -46,7 +46,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 555,
-    name: 'trtryrtyrty',
+    name: 'seller 5',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -57,7 +57,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 666,
-    name: 'trtryrtyrty',
+    name: 'seller 6',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -68,7 +68,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 33333,
-    name: 'trtryrtyrty',
+    name: 'seller 7',
     telephone1: 2587413598,
     email: 'asdasdasd.asdasd.com',
     userType: 'Vendor',
@@ -78,7 +78,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 11111,
-    name: 'trtryrtyrty',
+    name: 'seller 8',
     telephone1: 2587413598,
     email: 'asdasdasd.asdasd.com',
     address: 'ydffhjkhfsdjfhksdfsdf',
@@ -89,7 +89,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 444,
-    name: 'trtryrtyrty',
+    name: 'seller 9',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -100,7 +100,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 555,
-    name: 'trtryrtyrty',
+    name: 'seller 10',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -111,7 +111,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 666,
-    name: 'trtryrtyrty',
+    name: 'seller 11',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -122,7 +122,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 33333,
-    name: 'trtryrtyrty',
+    name: 'seller 12',
     telephone1: 2587413598,
     email: 'asdasdasd.asdasd.com',
     userType: 'Vendor',
@@ -132,7 +132,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 11111,
-    name: 'trtryrtyrty',
+    name: 'seller 13',
     telephone1: 2587413598,
     email: 'asdasdasd.asdasd.com',
     address: 'ydffhjkhfsdjfhksdfsdf',
@@ -143,7 +143,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 444,
-    name: 'trtryrtyrty',
+    name: 'seller 14',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -154,7 +154,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 555,
-    name: 'trtryrtyrty',
+    name: 'seller 15',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -165,7 +165,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 666,
-    name: 'trtryrtyrty',
+    name: 'seller 16',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -176,7 +176,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 33333,
-    name: 'trtryrtyrty',
+    name: 'seller 17',
     telephone1: 2587413598,
     email: 'asdasdasd.asdasd.com',
     userType: 'Vendor',
@@ -186,7 +186,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 11111,
-    name: 'trtryrtyrty',
+    name: 'seller 18',
     telephone1: 2587413598,
     email: 'asdasdasd.asdasd.com',
     address: 'مصر الجديده, القاهره',
@@ -197,7 +197,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 444,
-    name: 'trtryrtyrty',
+    name: 'seller 19',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -208,7 +208,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 555,
-    name: 'trtryrtyrty',
+    name: 'seller 20',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',
@@ -219,7 +219,7 @@ const TEMPSELLERS: User[] = [
   },
   {
     id: 666,
-    name: 'trtryrtyrty',
+    name: 'seller 21',
     telephone1: 2587413598,
     telephone2: 2015845799,
     email: 'asdasdasd.asdasd.com',

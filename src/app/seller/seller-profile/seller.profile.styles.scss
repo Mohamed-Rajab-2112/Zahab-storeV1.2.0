@@ -30,3 +30,22 @@
     }
   }
 }
+
+/*******************/
+/*responsive styles*/
+/*******************/
+
+@media screen and (max-width: 1024px) {
+  .seller-profile-container {
+    background-color: rgba(0, 0, 0, 0);
+    h2 {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .seller-profile-container {
+    width: $smallScreenWidth;
+  }
+}

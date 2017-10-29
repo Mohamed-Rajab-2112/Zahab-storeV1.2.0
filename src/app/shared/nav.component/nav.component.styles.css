@@ -243,10 +243,11 @@
 
 /* line 231, nav.component.styles.scss */
 .relative {
+  z-index: 91;
   position: relative;
 }
 
-/* line 235, nav.component.styles.scss */
+/* line 236, nav.component.styles.scss */
 .search-and-nav-container-placeholder {
   background-color: #eee;
   height: 160px;
@@ -256,24 +257,24 @@
 /*Responsive styles*/
 /*******************/
 @media screen and (max-width: 1100px) {
-  /* line 245, nav.component.styles.scss */
+  /* line 246, nav.component.styles.scss */
   .menu-overlay-background {
     display: block;
   }
 
-  /* line 248, nav.component.styles.scss */
+  /* line 249, nav.component.styles.scss */
   .translate-menu-close {
     transform: translate(-200px);
     transition: 0.25s all;
   }
 
-  /* line 252, nav.component.styles.scss */
+  /* line 253, nav.component.styles.scss */
   .translate-menu-open {
     transform: translate(0);
     transition: 0.25s all;
   }
 
-  /* line 256, nav.component.styles.scss */
+  /* line 257, nav.component.styles.scss */
   .small-width-nav-container {
     position: fixed;
     z-index: 102;
@@ -282,7 +283,7 @@
     background-color: #fff;
     height: 100%;
   }
-  /* line 263, nav.component.styles.scss */
+  /* line 264, nav.component.styles.scss */
   .small-width-nav-container .menu-item {
     display: flex;
     cursor: pointer;
@@ -294,37 +295,37 @@
     width: 200px;
     height: 40px;
   }
-  /* line 273, nav.component.styles.scss */
+  /* line 274, nav.component.styles.scss */
   .small-width-nav-container .menu-item:focus {
     outline: none;
   }
-  /* line 277, nav.component.styles.scss */
+  /* line 278, nav.component.styles.scss */
   .small-width-nav-container .menu-item .icon {
     width: 25px;
   }
-  /* line 281, nav.component.styles.scss */
+  /* line 282, nav.component.styles.scss */
   .small-width-nav-container .menu-item a {
     color: #31004a;
     margin-left: 10px;
   }
-  /* line 286, nav.component.styles.scss */
+  /* line 287, nav.component.styles.scss */
   .small-width-nav-container .active {
     padding-top: 5px;
     background-color: #31004a;
   }
-  /* line 291, nav.component.styles.scss */
+  /* line 292, nav.component.styles.scss */
   .small-width-nav-container .active .icon .menu-icon {
     fill: #75FF75;
   }
-  /* line 295, nav.component.styles.scss */
+  /* line 296, nav.component.styles.scss */
   .small-width-nav-container .active a {
     color: #75FF75;
   }
-  /* line 297, nav.component.styles.scss */
+  /* line 298, nav.component.styles.scss */
   .small-width-nav-container .active a:hover {
     color: #75FF75;
   }
-  /* line 302, nav.component.styles.scss */
+  /* line 303, nav.component.styles.scss */
   .small-width-nav-container .close {
     margin-bottom: 25px;
     margin-top: 10px;
@@ -332,54 +333,52 @@
     align-self: flex-end;
     width: 50px;
   }
-  /* line 308, nav.component.styles.scss */
+  /* line 309, nav.component.styles.scss */
   .small-width-nav-container .close svg {
     width: 35px;
   }
-  /* line 310, nav.component.styles.scss */
+  /* line 311, nav.component.styles.scss */
   .small-width-nav-container .close svg .a {
     fill: #31004a;
   }
 
-  /* line 317, nav.component.styles.scss */
+  /* line 318, nav.component.styles.scss */
   .nav .search-and-nav-container {
     border-bottom: 1px solid lightgrey;
   }
-  /* line 319, nav.component.styles.scss */
+  /* line 320, nav.component.styles.scss */
   .nav .search-and-nav-container .search-form-container {
     height: 60px;
   }
-  /* line 322, nav.component.styles.scss */
+  /* line 323, nav.component.styles.scss */
   .nav .search-and-nav-container .search-form-container .small-nav-and-logo-container .small-width-nav-button {
     display: block;
   }
-  /* line 327, nav.component.styles.scss */
+  /* line 328, nav.component.styles.scss */
   .nav .search-and-nav-container header {
     display: none;
   }
-  /* line 331, nav.component.styles.scss */
+  /* line 332, nav.component.styles.scss */
   .nav .search-and-nav-container-placeholder {
     height: 60px;
   }
 }
-@media screen and (max-width: 725px) {
-  /* line 341, nav.component.styles.scss */
-  .nav .above-header-container .above-header-for-width .to-be-hide {
-    display: none;
-  }
-}
-@media screen and (max-width: 600px) {
-  /* line 352, nav.component.styles.scss */
+@media screen and (max-width: 768px) {
+  /* line 351, nav.component.styles.scss */
   .nav .above-header-container .above-header-for-width {
     width: 95%;
   }
-  /* line 357, nav.component.styles.scss */
+  /* line 353, nav.component.styles.scss */
+  .nav .above-header-container .above-header-for-width .to-be-hide {
+    display: none;
+  }
+  /* line 359, nav.component.styles.scss */
   .nav .search-and-nav-container .search-form-container {
     width: 95%;
   }
 }
 @media screen and (max-width: 450px) {
-  /* line 369, nav.component.styles.scss */
+  /* line 371, nav.component.styles.scss */
   .nav .above-header-container .above-header-for-width .favourite-container p {
     display: none;
   }

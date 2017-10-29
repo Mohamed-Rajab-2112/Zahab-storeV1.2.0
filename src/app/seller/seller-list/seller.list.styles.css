@@ -47,8 +47,17 @@
   margin-top: 35px;
 }
 
+/*******************/
+/*Responsive styles*/
+/*******************/
+@media screen and (max-width: 768px) {
+  /* line 55, seller.list.styles.scss */
+  .sellers-list-container {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 425px) {
-  /* line 51, seller.list.styles.scss */
+  /* line 61, seller.list.styles.scss */
   .sellers-list-container {
     width: 95%;
   }

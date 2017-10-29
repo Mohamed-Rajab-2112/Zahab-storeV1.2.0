@@ -39,3 +39,23 @@
   fill: white;
   transition: 0.5s all;
 }
+
+/*******************/
+/*responsive styles*/
+/*******************/
+@media screen and (max-width: 1024px) {
+  /* line 39, seller.profile.styles.scss */
+  .seller-profile-container {
+    background-color: transparent;
+  }
+  /* line 41, seller.profile.styles.scss */
+  .seller-profile-container h2 {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 48, seller.profile.styles.scss */
+  .seller-profile-container {
+    width: 95%;
+  }
+}

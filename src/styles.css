@@ -1,17 +1,17 @@
-/* line 7, styles.scss */
+/* line 5, styles.scss */
 .form-validation-alert {
   margin-top: 5px;
   padding-top: 3px;
   padding-bottom: 3px;
 }
 
-/* line 14, styles.scss */
+/* line 12, styles.scss */
 .submit {
   background-color: #586D8C;
   cursor: pointer;
 }
 
-/* line 19, styles.scss */
+/* line 17, styles.scss */
 .close-btn {
   background-color: transparent;
   cursor: pointer;

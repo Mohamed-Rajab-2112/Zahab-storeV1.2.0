@@ -6,7 +6,7 @@
 /* line 6, jewellery.home.component.scss */
 .home .jewellery-sliding-header {
   position: relative;
-  z-index: 90;
+  z-index: 50;
   padding: 10px 10px 10px 15px;
   font-size: 1.2em;
   background-color: #fff;
@@ -101,7 +101,7 @@
 }
 /* line 95, jewellery.home.component.scss */
 .home .offers-container .overFlow-container jewellery-thumbnail {
-  width: 600%;
+  width: 400%;
 }
 
 /*******************/
@@ -198,5 +198,17 @@
   .home .slide-how-it-works .how-it-works-details-container .how-it-works-item h3 {
     font-size: 0.9em;
     text-align: left;
+  }
+  /* line 211, jewellery.home.component.scss */
+  .home .offers-container .overFlow-container jewellery-thumbnail {
+    width: 1000%;
+  }
+  /* line 215, jewellery.home.component.scss */
+  .home .offers-container button {
+    display: none;
+  }
+  /* line 220, jewellery.home.component.scss */
+  .home .jewellery-sliding-header {
+    width: 100%;
   }
 }

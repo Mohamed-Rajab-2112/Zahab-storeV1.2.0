@@ -50,12 +50,12 @@
     <button [disabled]="translateValueLatestOffers == 0" (click)="arrow('latestOffers', 'left')">
       <img src="assets/images/arrow-left.svg" [ngStyle]="translateValueLatestOffers == 0 ? {'opacity': '0.7'}: ''">
     </button>
-    <div class="overFlow-container">
-      <jewellery-thumbnail [products]="deals" [translate]="translateValueLatestOffers"></jewellery-thumbnail>
+    <div class="overFlow-container" (swipeleft)="arrow('latestOffers', 'right')" (swiperight)="arrow('latestOffers', 'left')">
+      <jewellery-thumbnail [products]="deals" [translate]="translateValueLatestOffers" ></jewellery-thumbnail>
     </div>
-    <button [disabled]="translateValueLatestOffers <= -83" (click)="arrow('latestOffers', 'right')">
+    <button [disabled]="translateValueLatestOffers <= maxTranslateValue" (click)="arrow('latestOffers', 'right')">
       <img src="assets/images/arrow-right.svg"
-           [ngStyle]="translateValueLatestOffers <= -83 ? {'opacity': '0.7'}: ''">
+           [ngStyle]="translateValueLatestOffers <= maxTranslateValue ? {'opacity': '0.7'}: ''">
     </button>
   </div>
 
@@ -67,13 +67,13 @@
       <img src="assets/images/arrow-left.svg">
     </button>
     <!--</div>-->
-    <div class="overFlow-container">
+    <div class="overFlow-container" (swipeleft)="arrow('mostVisited', 'right')" (swiperight)="arrow('mostVisited', 'left')">
       <jewellery-thumbnail [products]="mostVisited" [translate]="translateValueMostVisited"></jewellery-thumbnail>
     </div>
     <!--<div>-->
-    <button [disabled]="translateValueMostVisited <= -83" (click)="arrow('mostVisited', 'right')">
+    <button [disabled]="translateValueMostVisited <= maxTranslateValue" (click)="arrow('mostVisited', 'right')">
       <img src="assets/images/arrow-right.svg"
-           [ngStyle]="translateValueMostVisited <= -83 ? {'opacity': '0.7'}: ''">
+           [ngStyle]="translateValueMostVisited <= maxTranslateValue ? {'opacity': '0.7'}: ''">
     </button>
     <!--</div>-->
   </div>

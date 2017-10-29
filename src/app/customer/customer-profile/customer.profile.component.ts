@@ -16,7 +16,7 @@ export class CustomerProfile implements OnInit, OnDestroy {
   areas: string[];
   area: string;
   profileForm: FormGroup;
-  areaControl: FormControl;
+  // areaControl: FormControl;
   nameControl: FormControl;
   filteredAreas: Observable<string[]>;
   password: string;
@@ -39,7 +39,7 @@ export class CustomerProfile implements OnInit, OnDestroy {
 
     this.profileForm = new FormGroup(
       {
-        area: this.areaControl,
+        // area: this.areaControl,
         name: this.nameControl
       }
     );

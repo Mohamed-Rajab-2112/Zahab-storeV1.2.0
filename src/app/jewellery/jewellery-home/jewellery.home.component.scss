@@ -5,7 +5,7 @@
   margin: 35px auto 0;
   .jewellery-sliding-header {
     position: relative;
-    z-index: 90;
+    z-index: 50;
     padding: 10px 10px 10px 15px;
     font-size: 1.2em;
     background-color: $bgcolor;
@@ -93,7 +93,7 @@
       width: 100%;
       //border: 1px black solid;
       jewellery-thumbnail {
-        width: 600%;
+        width: 400%;
       }
     }
   }
@@ -205,6 +205,20 @@
           }
         }
       }
+    }
+    .offers-container {
+      .overFlow-container {
+        jewellery-thumbnail {
+          width: 1000%;
+        }
+      }
+      button {
+        display: none;
+      }
+    }
+
+    .jewellery-sliding-header {
+      width: 100%;
     }
   }
 }

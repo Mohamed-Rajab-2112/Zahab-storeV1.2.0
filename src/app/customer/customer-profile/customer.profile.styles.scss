@@ -18,9 +18,12 @@
       margin: 0 auto;
       display: flex;
       flex-direction: column;
+      app-autocomplete {
+        margin-bottom: 25px;
+      }
     }
     h3 {
-      margin-top: 50px;
+      margin-top: 15px;
       border-bottom: 1px solid $dcolor;
       margin-bottom: 15px;
     }

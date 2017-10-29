@@ -96,12 +96,18 @@
     margin-top: 35px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   /* line 90, jewellery.details.styles.scss */
   .jewellery-details {
     width: 95%;
   }
-  /* line 93, jewellery.details.styles.scss */
+}
+@media screen and (max-width: 425px) {
+  /* line 96, jewellery.details.styles.scss */
+  .jewellery-details {
+    width: 95%;
+  }
+  /* line 99, jewellery.details.styles.scss */
   .jewellery-details .title-id-container .name-and-price {
     flex-wrap: wrap;
   }
